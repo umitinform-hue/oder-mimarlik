@@ -5,7 +5,7 @@ document.querySelector('#year').textContent=new Date().getFullYear();
 const langButton=document.querySelector('.lang-button');
 langButton.addEventListener('click',()=>document.querySelector('.lang-menu').classList.toggle('open'));
 document.addEventListener('click',e=>{if(!e.target.closest('.lang-wrap'))document.querySelector('.lang-menu').classList.remove('open')});
-const languageNames={tr:'TR',en:'EN',ru:'RU',sq:'SQ',bs:'BS',bg:'BG',hr:'HR',el:'EL',ro:'RO',sr:'SR','sr-Latn':'SR',cnr:'ME',sl:'SL',hu:'HU',de:'DE',fr:'FR',it:'IT',es:'ES',pt:'PT',nl:'NL',pl:'PL',cs:'CS',sk:'SK',uk:'UK',be:'BE',sv:'SV',no:'NO',da:'DA',fi:'FI',et:'ET',lv:'LV',lt:'LT',is:'IS',ga:'GA',mt:'MT',lb:'LB',cy:'CY',ca:'CA',eu:'EU',gl:'GL',hy:'HY',ka:'KA',az:'AZ',ar:'AR','zh-CN':'中文',ja:'JA',ko:'KO',hi:'HI'};
+const languageNames={tr:'TR',en:'EN',bg:'BG',ro:'RO',sr:'SR',sq:'SQ'};
 const translatedCopy={
   tr:{heroTitle:'Mobilya iyi,<br>mekân bambaşka<span class="dot">.</span>',heroLead:'Ölçüye özel mobilya, mutfak ve iç mekân tasarımıyla yaşam ve çalışma alanlarınızı fikirden uygulamaya taşıyoruz.',heroCta:'Proje fikrini paylaş <span>↗</span>',heroExplore:'Uygulama ve tasarımlar <span>↓</span>'},
   en:{heroTitle:'Furniture that transforms<br>a room<span class="dot">.</span>',heroLead:'We bring living and working spaces from idea to completion with bespoke furniture, kitchens and interior design.',heroCta:'Share your project <span>↗</span>',heroExplore:'Explore our work <span>↓</span>'}
@@ -14,9 +14,13 @@ function setLanguage(lang){
   const copy=translatedCopy[lang];document.querySelector('.lang-menu').classList.remove('open');
   if(!copy){document.documentElement.lang='tr';langButton.innerHTML='TR <span>⌄</span>';document.querySelector('.language-help').textContent='Bu dilin tam sayfa çevirisi henüz hazır değil. Site Türkçe kalır; çeviri dış sayfada açılmaz.';try{localStorage.removeItem('oder-language')}catch{};return}
   document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{if(copy[el.dataset.i18n])el.innerHTML=copy[el.dataset.i18n]});
-  document.querySelector('.language-help').textContent=lang==='en'?'English introduction selected. Other page sections are currently available in Turkish.':'Türkçe içerik seçildi.';
+  document.querySelector('.language-help').textContent=lang==='en'?'English project introduction selected. For a complete scope, share your project and we will reply in English.':'Türkçe içerik seçildi.';
   langButton.innerHTML=`${languageNames[lang]||lang.toUpperCase()} <span>⌄</span>`;try{localStorage.setItem('oder-language',lang)}catch{}
-}document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.translate)));
+}document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>{setLanguage(button.dataset.translate);window.dispatchEvent(new CustomEvent('oder:language',{detail:button.dataset.translate}))}));
+function track(name, detail={}){window.dispatchEvent(new CustomEvent(`oder:${name}`,{detail}))}
+document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"],a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>track('contact_click',{href:a.href})));
+document.querySelectorAll('.service-card,.hero-actions a,.estimate-action').forEach(a=>a.addEventListener('click',()=>track('cta_click',{text:a.textContent.trim()})));
+
 try{const saved=localStorage.getItem('oder-language');if(saved&&languageNames[saved])setLanguage(saved);else if(!navigator.language.toLowerCase().startsWith('tr'))setLanguage('en')}catch{}
 
 const menuToggle=document.querySelector('.menu-toggle');
