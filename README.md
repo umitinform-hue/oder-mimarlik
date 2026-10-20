@@ -12,11 +12,11 @@ Tek sayfalı, mobil uyumlu site taslağı. HTML, CSS ve sade JavaScript ile çal
 6. Dil menüsünde 40'tan fazla dil seçeneği bulunur. Seçim Google Translate Websites ekranını açıp URL'yi panoya kopyalar; ziyaretçi çeviriyi ayrıca başlatır. Otomatik ülke algılama ve tüm içeriklerin her dilde otomatik çevrilmesi uygulanmış değildir. Bunun için IP/ülke servisi ve çeviri katmanı veya insan kontrolünden geçmiş dil sayfaları gerekir. Menüdeki dış çeviri SEO için indekslenebilir yerel sayfalar oluşturmaz. Google Translate web sitesi widget'ı 1 Ekim 2026 itibarıyla desteklenmediği için kullanılmadı ([Google duyurusu](https://developers.google.com/search/blog/2020/05/google-translates-website-translator?hl=en)). Kalıcı çok dilli SEO için dil başına URL, insan kontrolünden geçmiş çeviri, hreflang/canonical/sitemap eşleri ve her dilde yapılandırılmış veri ekleyin.
 7. SSS AEO için kısa, doğrudan yanıtlar ve FAQ structured data içerir; arama motorlarında zengin sonuç garantisi değildir. Yerel adres, koordinat, yorum ve tamamlanmış proje iddiaları doğrulanmadan eklenmemiştir. Site Türkiye ve Avrupa genelinde hizmeti hedefleyen taslak içeriğe sahiptir; gerçek hizmet kapsamı ve operasyon ülkelerini yayından önce kesinleştirin. Bauhaus ve IKEA metin içinde olası kurumsal teklif hedefleri olarak anılır; iş ortaklığı veya tedarikçi ilişkisi anlamına gelmez.
 
-## GitHub Pages — farklı GitHub kullanıcısı
+## Canlı yayın ve özel alan adları
 
-1. GitHub'da yayınlayacak kullanıcı ile boş bir repository oluşturun; repository adını, erişim izinlerini ve varsa özel domaini kullanıcı kendi hesabında doğrulasın.
-2. Bu klasörün içeriğini yeni repository'ye aktarın. Erişimi doğrulamak için hesabın kendi GitHub CLI oturumu veya SSH anahtarı kullanılabilir; token/parola site dosyalarına konmamalıdır.
-3. Repository ayarlarında Pages kaynağını `main` branch ve repository kök klasörü (`/`) seçin. Özel domain kullanılacaksa DNS'i sağlayıcı yönergelerine göre kurup HTTPS'i açın.
-4. Pages'in verdiği URL'yi açıp telefonda menü, dil seçimi, maliyet formu, SSS ve iletişim akışını kontrol edin. Gerçek e-posta/domain eklendikten sonra canonical, sitemap ve robots değerlerini son kez kontrol edin.
+1. Repository: `umitinform-hue/oder-mimarlik` (public). GitHub Pages `main` branch kök dizininden yayın yapar.
+2. Yedek yayın adresi: `https://umitinform-hue.github.io/oder-mimarlik/`.
+3. Ana özel alan adı `odermimarlık.com` Punycode biçimi `xn--odermimarlk-8zb.com` olarak yapılandırılmıştır. Metunic DNS bölgesine GitHub Pages A kayıtları ve `www` CNAME kaydı eklenmiştir.
+4. `odermimarlık.com.tr`, Metunic URL yönlendirmesiyle 301 olarak ana `.com` alanına yönlendirilir.
+5. DNS sorgusu yetkili Metunic sunucularında şu an reddedildiğinden alan adı çözümlemesi ve HTTPS sertifikası henüz doğrulanmamıştır. DNS çalıştığında canonical, sitemap ve robots Punycode ana alan adını kullanır.
 
-Bu çalışma alanında repository oluşturma/yükleme ve GitHub Pages bağlantısı henüz tamamlanmamıştır. Mevcut düzenleme yerel proje dosyalarında hazırdır. Pages repository URL'si belli olunca canonical, sitemap ve robots alanlarını gerçek adresle güncelleyin.
