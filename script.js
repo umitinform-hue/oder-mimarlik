@@ -1,19 +1,18 @@
 const CONTACT_EMAIL = ""; // Yayına çıkmadan önce doğrulanmış kurumsal e-posta adresini buraya ekleyin.
 document.querySelector('#year').textContent=new Date().getFullYear();
 
-// Google's retired Website Translator widget is not used; this opens its public page translator for the selected language.
+// Keep language selection on this page; no third-party translation redirect.
 const langButton=document.querySelector('.lang-button');
 langButton.addEventListener('click',()=>document.querySelector('.lang-menu').classList.toggle('open'));
 document.addEventListener('click',e=>{if(!e.target.closest('.lang-wrap'))document.querySelector('.lang-menu').classList.remove('open')});
-document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',async()=>{
-  const lang=button.dataset.translate;document.querySelector('.lang-menu').classList.remove('open');
-  if(lang==='tr'){document.documentElement.lang='tr';langButton.innerHTML='TR <span>⌄</span>';return}
-  if(location.protocol==='file:'){alert('Dil çevirisi, site web adresinde yayımlandıktan sonra kullanılabilir.');return}
-  let targetLang=lang;if(lang==='cnr'||lang==='sr-Latn')targetLang='sr';
-  const url=new URL('https://translate.google.com/');url.searchParams.set('op','websites');url.searchParams.set('sl','tr');url.searchParams.set('tl',targetLang);
-  window.open(url.toString(),'_blank','noopener,noreferrer');
-  try{await navigator.clipboard.writeText(location.href);document.querySelector('.language-help').textContent='Site adresi panoya kopyalandı. Google Translate Websites ekranına yapıştırıp başlatın.'}catch{document.querySelector('.language-help').textContent='Google Translate Websites alanına bu sitenin web adresini yapıştırıp çeviriyi başlatın.'}
-}));
+const languageNames={tr:'TR',en:'EN',ru:'RU',sq:'SQ',bs:'BS',bg:'BG',hr:'HR',el:'EL',ro:'RO',sr:'SR','sr-Latn':'SR',cnr:'ME',sl:'SL',hu:'HU',de:'DE',fr:'FR',it:'IT',es:'ES',pt:'PT',nl:'NL',pl:'PL',cs:'CS',sk:'SK',uk:'UK',be:'BE',sv:'SV',no:'NO',da:'DA',fi:'FI',et:'ET',lv:'LV',lt:'LT',is:'IS',ga:'GA',mt:'MT',lb:'LB',cy:'CY',ca:'CA',eu:'EU',gl:'GL',hy:'HY',ka:'KA',az:'AZ',ar:'AR','zh-CN':'中文',ja:'JA',ko:'KO',hi:'HI'};
+const translatedCopy={
+  tr:{heroTitle:'Mobilya iyi,<br>mekân bambaşka<span class="dot">.</span>',heroLead:'Ölçüye özel mobilya, mutfak ve iç mekân tasarımıyla yaşam ve çalışma alanlarınızı fikirden uygulamaya taşıyoruz.',heroCta:'Proje fikrini paylaş <span>↗</span>',heroExplore:'Uygulama ve tasarımlar <span>↓</span>'},
+  en:{heroTitle:'Furniture that transforms<br>a room<span class="dot">.</span>',heroLead:'We bring living and working spaces from idea to completion with bespoke furniture, kitchens and interior design.',heroCta:'Share your project <span>↗</span>',heroExplore:'Explore our work <span>↓</span>'}
+};
+function setLanguage(lang){const copy=translatedCopy[lang];document.querySelector('.lang-menu').classList.remove('open');if(copy){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{if(copy[el.dataset.i18n])el.innerHTML=copy[el.dataset.i18n]});document.querySelector('.language-help').textContent=lang==='en'?'English is active for the main introduction.':'Türkçe içerik seçildi.'}else{document.documentElement.lang='tr';const tr=translatedCopy.tr;document.querySelectorAll('[data-i18n]').forEach(el=>{if(tr[el.dataset.i18n])el.innerHTML=tr[el.dataset.i18n]});document.querySelector('.language-help').textContent='Bu dil için sayfa çevirisi henüz hazır değil; mevcut Türkçe içerik korunuyor.'}langButton.innerHTML=`${languageNames[lang]||lang.toUpperCase()} <span>⌄</span>`;try{localStorage.setItem('oder-language',lang)}catch{}}
+document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.translate)));
+try{const saved=localStorage.getItem('oder-language');if(saved&&languageNames[saved])setLanguage(saved);else if(!navigator.language.toLowerCase().startsWith('tr'))setLanguage('en')}catch{}
 
 const menuToggle=document.querySelector('.menu-toggle');
 menuToggle.addEventListener('click',()=>{const nav=document.querySelector('.nav');const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Menüyü kapat':'Menüyü aç')});
