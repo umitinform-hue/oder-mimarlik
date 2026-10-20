@@ -4,7 +4,7 @@ Tek sayfalı, mobil uyumlu site taslağı. HTML, CSS ve sade JavaScript ile çal
 
 ## Yayına hazırlık
 
-1. `index.html` içindeki örnek `odermimarlik.com` adreslerini doğrulanmış domain ile güncelleyin: canonical, Open Graph görseli, JSON-LD `url`, robots ve sitemap.
+1. Canonical, Open Graph, JSON-LD, robots ve sitemap `https://xn--odermimarlk-8zb.com/` adresini kullanır.
 2. `script.js` başındaki `CONTACT_EMAIL` değerine gerçekten kullanılan ve doğrulanmış iletişim e-postasını yazın. Form, kullanıcının e-posta uygulamasında gönderime hazır taslak açar; kendi başına veri toplamaz.
 3. `pricing-config.js`, kullanıcı tarafından sağlanan altı kategori €/m² taban fiyatını, üç kalite çarpanını ve 40 ülke/bölge katsayısını içerir. `script.js` içindeki `window.calculateProjectEstimate(areaM2, category, quality, countryCode)` fonksiyonu temel tutarı ve ±%15 fiyat aralığını hesaplar. `extreme` kategorisinde alan 100 m² üstündeyse %10 danışmanlık payı uygulanır. Bu değerler ön tahmindir; kesin teklif değildir.
 4. `assets/portfolio/` içindeki Serkan saha arşivinden 65 benzersiz fotoğraf içerir. Küçük görsele tıklanınca yüksek çözünürlüklü orijinal açılır. `assets/videos/` içinde 7 benzersiz MP4 video doğrudan oynatılır. Mustafa klasöründen 6 logosuz kırpılmış görsel ayrı bir 3D tasarım konsepti alanında sunulur. Fotoğraf ve videoları yayına almadan önce yayın hakkını ve proje atıflarını doğrulayın.
@@ -17,6 +17,6 @@ Tek sayfalı, mobil uyumlu site taslağı. HTML, CSS ve sade JavaScript ile çal
 1. Repository: `umitinform-hue/oder-mimarlik` (public). GitHub Pages `main` branch kök dizininden yayın yapar.
 2. Yedek yayın adresi: `https://umitinform-hue.github.io/oder-mimarlik/`.
 3. Ana özel alan adı `odermimarlık.com` Punycode biçimi `xn--odermimarlk-8zb.com` olarak yapılandırılmıştır. Metunic DNS bölgesine GitHub Pages A kayıtları ve `www` CNAME kaydı eklenmiştir.
-4. `odermimarlık.com.tr`, Metunic URL yönlendirmesinde 301 olarak ana `.com` alanına yönlendirilmek üzere ayarlanmıştır.
-5. Metunic yetkili DNS sunucuları alan adı sorgularına SERVFAIL döndürdüğü için özel alan adı Pages ayarından geçici olarak kaldırıldı. DNS kaydı açıldığında custom domain tekrar Pages'e eklenmeli; o zamana kadar canonical, sitemap ve robots doğrulanmış GitHub Pages adresini kullanır.
+4. `odermimarlık.com.tr`, Metunic URL yönlendirmesinde 301 olarak ana `.com` alanına yönlendirilmek üzere ayarlanmıştır. Ancak 21 Ekim 2026 tarihinde Google DNS, `.com.tr` yetkili sunucularından REFUSED yanıtı aldı; bu yönlendirme henüz dışarıdan çözümlenemiyor.
+5. 21 Ekim 2026 tarihinde `.com` için dört GitHub Pages A kaydı ve `www` CNAME kaydı Google DNS tarafından görüldü; HTTP ve HTTPS istekleri GitHub Pages'ten `200 OK` döndürdü. GitHub Pages özel domaini `odermimarlık.com` kaydetti; DNS kontrolü/sertifika durumu GitHub ayarlarında ayrıca izlenmelidir. Bazı istemcilerde eski NXDOMAIN yanıtı önbellekte kalabilir.
 
