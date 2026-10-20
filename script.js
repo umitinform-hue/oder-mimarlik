@@ -10,8 +10,13 @@ const translatedCopy={
   tr:{heroTitle:'Mobilya iyi,<br>mekân bambaşka<span class="dot">.</span>',heroLead:'Ölçüye özel mobilya, mutfak ve iç mekân tasarımıyla yaşam ve çalışma alanlarınızı fikirden uygulamaya taşıyoruz.',heroCta:'Proje fikrini paylaş <span>↗</span>',heroExplore:'Uygulama ve tasarımlar <span>↓</span>'},
   en:{heroTitle:'Furniture that transforms<br>a room<span class="dot">.</span>',heroLead:'We bring living and working spaces from idea to completion with bespoke furniture, kitchens and interior design.',heroCta:'Share your project <span>↗</span>',heroExplore:'Explore our work <span>↓</span>'}
 };
-function setLanguage(lang){const copy=translatedCopy[lang];document.querySelector('.lang-menu').classList.remove('open');if(copy){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{if(copy[el.dataset.i18n])el.innerHTML=copy[el.dataset.i18n]});document.querySelector('.language-help').textContent=lang==='en'?'English is active for the main introduction.':'Türkçe içerik seçildi.'}else{document.documentElement.lang='tr';const tr=translatedCopy.tr;document.querySelectorAll('[data-i18n]').forEach(el=>{if(tr[el.dataset.i18n])el.innerHTML=tr[el.dataset.i18n]});document.querySelector('.language-help').textContent='Bu dil için sayfa çevirisi henüz hazır değil; mevcut Türkçe içerik korunuyor.'}langButton.innerHTML=`${languageNames[lang]||lang.toUpperCase()} <span>⌄</span>`;try{localStorage.setItem('oder-language',lang)}catch{}}
-document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.translate)));
+function setLanguage(lang){
+  const copy=translatedCopy[lang];document.querySelector('.lang-menu').classList.remove('open');
+  if(!copy){document.documentElement.lang='tr';langButton.innerHTML='TR <span>⌄</span>';document.querySelector('.language-help').textContent='Bu dilin tam sayfa çevirisi henüz hazır değil. Site Türkçe kalır; çeviri dış sayfada açılmaz.';try{localStorage.removeItem('oder-language')}catch{};return}
+  document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{if(copy[el.dataset.i18n])el.innerHTML=copy[el.dataset.i18n]});
+  document.querySelector('.language-help').textContent=lang==='en'?'English introduction selected. Other page sections are currently available in Turkish.':'Türkçe içerik seçildi.';
+  langButton.innerHTML=`${languageNames[lang]||lang.toUpperCase()} <span>⌄</span>`;try{localStorage.setItem('oder-language',lang)}catch{}
+}document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.translate)));
 try{const saved=localStorage.getItem('oder-language');if(saved&&languageNames[saved])setLanguage(saved);else if(!navigator.language.toLowerCase().startsWith('tr'))setLanguage('en')}catch{}
 
 const menuToggle=document.querySelector('.menu-toggle');
