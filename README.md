@@ -17,6 +17,6 @@ Tek sayfalı, mobil uyumlu site taslağı. HTML, CSS ve sade JavaScript ile çal
 1. Repository: `umitinform-hue/oder-mimarlik` (public). GitHub Pages `main` branch kök dizininden yayın yapar.
 2. Yedek yayın adresi: `https://umitinform-hue.github.io/oder-mimarlik/`.
 3. Ana özel alan adı `odermimarlık.com` Punycode biçimi `xn--odermimarlk-8zb.com` olarak yapılandırılmıştır. Metunic DNS bölgesine GitHub Pages A kayıtları ve `www` CNAME kaydı eklenmiştir.
-4. `odermimarlık.com.tr`, Metunic URL yönlendirmesiyle 301 olarak ana `.com` alanına yönlendirilir.
-5. DNS sorgusu yetkili Metunic sunucularında şu an reddedildiğinden alan adı çözümlemesi ve HTTPS sertifikası henüz doğrulanmamıştır. DNS çalıştığında canonical, sitemap ve robots Punycode ana alan adını kullanır.
+4. `odermimarlık.com.tr`, Metunic URL yönlendirmesinde 301 olarak ana `.com` alanına yönlendirilmek üzere ayarlanmıştır.
+5. Metunic yetkili DNS sunucuları alan adı sorgularına SERVFAIL döndürdüğü için özel alan adı Pages ayarından geçici olarak kaldırıldı. DNS kaydı açıldığında custom domain tekrar Pages'e eklenmeli; o zamana kadar canonical, sitemap ve robots doğrulanmış GitHub Pages adresini kullanır.
 
