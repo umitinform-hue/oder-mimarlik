@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = ""; // Yayına çıkmadan önce doğrulanmış kurumsal e-posta adresini buraya ekleyin.
+const CONTACT_EMAIL = "info@odergroup.com.tr";
 document.querySelector('#year').textContent=new Date().getFullYear();
 
 // Keep language selection on this page; no third-party translation redirect.
