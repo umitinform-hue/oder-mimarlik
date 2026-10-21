@@ -6,11 +6,12 @@ Bu paket `umitinform-hue/oder-mimarlik` canlı kaynağı üzerinden hazırlanmı
 
 - Premium hero ve gerçek saha görselleriyle görsel sistem
 - Harici Unsplash görsellerinin gerçek proje görselleriyle değiştirilmesi
+- Önceki Öder tasarım vizyonu hero videosu: `assets/videos/hero-oder.mp4`; poster fallback ve `VideoObject` schema ile
 - Telefon ve WhatsApp hızlı iletişim CTA’ları
 - Premium sabit dönüşüm barı
 - Twitter/X kart metadata’sı ve favicon
 - `ProfessionalService`, `Organization`, `WebSite`, `FAQPage` ve yerel hizmet bilgileri için JSON-LD
-- İngilizce, Bulgarca, Romence, Sırpça ve Arnavutça indekslenebilir landing page’leri: `/en/`, `/bg/`, `/ro/`, `/sr/`, `/sq/`
+- İngilizce, Bulgarca, Romence, Sırpça, Arnavutça, Yunanca, Boşnakça, Hırvatça, Makedonca, Slovence ve Karadağca için aynı orijinal tasarım şablonunu koruyan indekslenebilir sayfalar: `/en/`, `/bg/`, `/ro/`, `/sr/`, `/sq/`, `/el/`, `/bs/`, `/hr/`, `/mk/`, `/sl/`, `/me/`
 - Dil sayfaları arasında `hreflang` ve `x-default` bağlantıları
 - Bölgesel hedefleme: Türkiye, Bulgaristan, Yunanistan, Sırbistan, Kuzey Makedonya, Arnavutluk, Kosova, Bosna-Hersek, Karadağ ve Romanya
 - Form gönderimi mevcut e-posta taslağı akışını korur; WhatsApp hızlı kanal olarak eklenmiştir.
@@ -21,6 +22,6 @@ GitHub Pages kaynağı `main` branch ve root `/` olarak kalmalıdır. CNAME dosy
 
 ## Notlar
 
-Windows workspace bağlantısı bu oturumda henüz erişilebilir olmadığından, masaüstündeki ek görseller pakete alınamamıştır. Paket mevcut canlı depodaki gerçek ÖDER saha görselleriyle çalışır; masaüstü görselleri bağlandığında aynı klasör yapısına eklenebilir.
+Ek ZIP görsel paketi bu Sandbox oturumunda fiziksel dosya olarak görünmediğinden pakete alınamadı; mevcut canlı depodaki gerçek ÖDER saha görselleri kullanıldı. Paket mevcut canlı depodaki gerçek ÖDER saha görselleriyle çalışır; masaüstü görselleri bağlandığında aynı klasör yapısına eklenebilir.
 
 Lead kaybını tamamen önlemek için sonraki adımda statik `mailto:` formu yerine serverless form endpoint’i veya CRM webhook’u bağlanmalıdır. Mevcut paket, kullanıcıyı WhatsApp ve telefonla doğrudan temasa yönlendirir.
