@@ -19,12 +19,14 @@ function setLanguage(lang){
   document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{if(copy[el.dataset.i18n])el.innerHTML=copy[el.dataset.i18n]});
   document.querySelector('.language-help').textContent=lang==='en'?'English project introduction selected. For a complete scope, share your project and we will reply in English.':'Türkçe içerik seçildi.';
   langButton.innerHTML=`${languageNames[lang]||lang.toUpperCase()} <span>⌄</span>`;try{localStorage.setItem('oder-language',lang)}catch{}
-}document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>{setLanguage(button.dataset.translate);window.dispatchEvent(new CustomEvent('oder:language',{detail:button.dataset.translate}))}));
-function track(name, detail={}){window.dispatchEvent(new CustomEvent(`oder:${name}`,{detail}))}
-document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"],a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>track('contact_click',{href:a.href})));
-document.querySelectorAll('.service-card,.hero-actions a,.estimate-action').forEach(a=>a.addEventListener('click',()=>track('cta_click',{text:a.textContent.trim()})));
+}document.querySelectorAll('[data-translate]').forEach(button=>button.addEventListener('click',()=>{track('language_select',{language:button.dataset.translate});setLanguage(button.dataset.translate);window.dispatchEvent(new CustomEvent('oder:language',{detail:button.dataset.translate}))}));
+window.dataLayer=window.dataLayer||[];
+function track(name, detail={}){const eventName=`oder_${name}`;window.dataLayer.push({event:eventName,...detail});if(typeof window.gtag==='function')window.gtag('event',eventName,detail);window.dispatchEvent(new CustomEvent(`oder:${name}`,{detail}))}
+document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"],a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>track(a.href.includes('wa.me')?'whatsapp_click':a.href.startsWith('tel:')?'phone_click':'email_click',{href:a.href})));
+document.querySelectorAll('.service-card,.hero-actions a,.estimate-action').forEach(a=>a.addEventListener('click',()=>track('cta_click',{text:a.textContent.trim()})));document.querySelectorAll('.hero-actions .button').forEach(a=>a.addEventListener('click',()=>track('hero_cta_click',{text:a.textContent.trim()})));document.querySelectorAll('#portfolio-gallery a').forEach(a=>a.addEventListener('click',()=>track('project_gallery_open',{href:a.href})));
 
 try{const saved=localStorage.getItem('oder-language');if(saved&&languageNames[saved])setLanguage(saved);else if(!navigator.language.toLowerCase().startsWith('tr'))setLanguage('en')}catch{}
+if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData){document.querySelectorAll('video[autoplay]').forEach(video=>{video.pause();video.autoplay=false;video.removeAttribute('autoplay')})}
 
 const menuToggle=document.querySelector('.menu-toggle');
 menuToggle.addEventListener('click',()=>{const nav=document.querySelector('.nav');const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Menüyü kapat':'Menüyü aç')});
@@ -79,15 +81,15 @@ function updateEstimate(){
   price.textContent=`${formatEuro(estimate.minimum)} - ${formatEuro(estimate.maximum)}`;
   time.textContent=estimate.consultancyBonus?'100 m² üzeri ekstrem proje için %10 mimarlık danışmanlık payı dahil.':'Yaklaşık hesap · Kesin kapsam ve teslimat süresi keşif sonrası netleştirilir.';
 }
-area.addEventListener('input',updateEstimate);country.addEventListener('change',updateEstimate);
+area.addEventListener('input',updateEstimate);country.addEventListener('change',()=>{track('country_select',{country:country.value});updateEstimate()});
 document.querySelectorAll('input[name="segment"]').forEach(input=>input.addEventListener('change',updateEstimate));
 document.querySelectorAll('.type-option').forEach(button=>button.addEventListener('click',()=>{document.querySelector('.type-option.active')?.classList.remove('active');button.classList.add('active');projectType=button.dataset.type;projectTypeLabel=button.textContent.trim();updateEstimate()}));
 updateEstimate();
-document.querySelector('#use-estimate').addEventListener('click',()=>{
+document.querySelector('#use-estimate').addEventListener('click',()=>{track('calculator_complete',{category:projectType,country:country.value});track('calculator_add_to_project',{category:projectType,country:country.value});
   const estimate=window.calculateProjectEstimate(area.value,projectType,selectedSegment(),country.value);
   const summary=`Proje türü: ${projectTypeLabel}\nYaklaşık alan: ${area.value} m²\nMalzeme segmenti: ${selectedSegment()}\nUygulama ülkesi: ${country.options[country.selectedIndex].text}\nTahmini fiyat aralığı: ${formatEuro(estimate.minimum)} - ${formatEuro(estimate.maximum)}\n${estimate.consultancyBonus?'Ek bilgi: 100 m² üzeri ekstrem proje için %10 mimarlık danışmanlık payı dahil.':''}`;
   document.querySelector('[name="location"]').value=country.options[country.selectedIndex].text;
   const message=document.querySelector('[name="message"]');message.value=`${summary}\n\nİhtiyacım / proje notlarım: `;document.querySelector('#iletisim').scrollIntoView({behavior:'smooth'});message.focus();
 });
 
-document.querySelector('#contact-form').addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;const data=new FormData(form);if(!CONTACT_EMAIL){document.querySelector('.form-feedback').textContent='Talep taslağı hazır. Gönderimi açmak için yayından önce doğrulanmış kurumsal e-posta adresini script.js içindeki CONTACT_EMAIL alanına ekleyin.';return}const subject=encodeURIComponent(`Web sitesi proje talebi — ${data.get('name')}`);const body=encodeURIComponent(`Ad: ${data.get('name')}\nE-posta: ${data.get('email')}\nTelefon: ${data.get('phone')||'Belirtilmedi'}\nKonum: ${data.get('location')}\n\nProje: ${data.get('message')}`);window.location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;document.querySelector('.form-feedback').textContent='E-posta taslağı oluşturuldu. İletmek için e-posta uygulamanızdan gönderin.'});
+const contactForm=document.querySelector('#contact-form');let formStarted=false;contactForm.addEventListener('focusin',()=>{if(!formStarted){formStarted=true;track('form_start')}});contactForm.addEventListener('submit',event=>{track('form_submit');event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;const data=new FormData(form);if(!CONTACT_EMAIL){document.querySelector('.form-feedback').textContent='Talep taslağı hazır. Gönderimi açmak için yayından önce doğrulanmış kurumsal e-posta adresini script.js içindeki CONTACT_EMAIL alanına ekleyin.';return}const subject=encodeURIComponent(`Web sitesi proje talebi — ${data.get('name')}`);const body=encodeURIComponent(`Ad: ${data.get('name')}\nE-posta: ${data.get('email')}\nTelefon: ${data.get('phone')||'Belirtilmedi'}\nKonum: ${data.get('location')}\n\nProje: ${data.get('message')}`);window.location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;document.querySelector('.form-feedback').textContent='E-posta taslağı oluşturuldu. İletmek için e-posta uygulamanızdan gönderin.'});
