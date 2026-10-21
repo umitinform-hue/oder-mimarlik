@@ -8,6 +8,8 @@ GitHub Pages yayını, özel alan adı, HTTPS zorlaması, sitemap ve çok dilli 
 
 Google hesabında Search Console açıldı ve mülk ekleme ekranına ulaşıldı. Ancak alan adı formu tarayıcı devrinde doldurulmadan kaldı; Google mülk ekleme işlemini tamamlamadı. Alan adı mülkü DNS TXT doğrulaması istediği için, mülk oluşturulmadan sitemap gönderimi yapılamaz.
 
+Son kontrolde Search Console hesabında `odermimarlık.com` adlı mevcut bir mülk bulunduğu, fakat açık olan `umitoder@odergroup.com.tr` hesabının bu mülke erişimi olmadığı görüldü. Google ekranı “mülkiyetinizi doğrulayın” seçeneğini gösteriyor; mülk sahibi hesap veya DNS doğrulaması olmadan URL Inspection ve sitemap gönderimi yetkisi vermiyor.
+
 Gönderilecek sitemap adresleri hazırdır:
 
 - `https://xn--odermimarlk-8zb.com/sitemap.xml`
