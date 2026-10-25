@@ -21,9 +21,9 @@ Bing Webmaster açıldı. Microsoft hesabı oturumu bulunmadığı için Google 
 
 ## GA4 / GTM
 
-Google Analytics hesabında `www.odergroup.com.tr` ile ilişkili mevcut bir GA4 mülkü bulundu ve veri topladığı görüldü. Bu mülkün ölçüm kimliği Öder Mimarlık alan adına ait olarak doğrulanamadığı için başka bir markanın ölçüm kimliği siteye eklenmedi.
+Öder Mimarlık için ayrı GA4 web akışı oluşturuldu ve ölçüm kimliği `G-XG6PLBHVFW` olarak doğrulandı. Ayrı GTM containerı `GTM-WMPNP7JJ` oluşturuldu; Google Analytics etiketi `Initialization - All Pages` tetikleyicisi ile yapılandırılıp yayınlandı. Site ana sayfa, Balkan dil sayfaları ve hizmet landing sayfalarında GTM head + noscript kodlarını taşır.
 
-Öder Mimarlık sitesindeki dönüşüm altyapısı hazırdır. `dataLayer` olayları ve varsa `gtag` çağrıları şu olayları üretir: `oder_form_start`, `oder_form_submit`, `oder_hero_cta_click`, `oder_whatsapp_click`, `oder_phone_click`, `oder_email_click`, `oder_calculator_complete`, `oder_calculator_add_to_project`, `oder_language_select`, `oder_country_select` ve `oder_project_gallery_open`.
+Öder Mimarlık sitesindeki dönüşüm altyapısı hazırdır. `dataLayer` olayları ve varsa `gtag` çağrıları şu olayları üretir: `oder_form_start`, `oder_form_submit`, `oder_generate_lead`, `oder_hero_cta_click`, `oder_whatsapp_click`, `oder_phone_click`, `oder_email_click`, `oder_calculator_complete`, `oder_calculator_add_to_project`, `oder_language_select`, `oder_country_select` ve `oder_project_gallery_open`.
 
 Gerçek GA4/GTM ölçümünün aktif olması için Öder Mimarlık’e ait GA4 Measurement ID (`G-...`) veya GTM Container ID (`GTM-...`) gerekir. Bu kimlik olmadan script eklemek ölçüm üretmez ve yanlış markanın verisini kirletir.
 
@@ -37,6 +37,6 @@ Bu nedenle form gönderimi çalışır biçimde test edildi: zorunlu alan doğru
 
 23 HTML rotası, JSON-LD blokları, sitemap XML dosyaları, hizmet landing sayfaları ve HTTPS yayını doğrulandı. GitHub Pages API sonucu `status: built` ve `https_enforced: true` durumundadır.
 
-## Kalan iki gerçek hesap adımı
+## Kalan dış hesap doğrulamaları
 
-Google Search Console’da `xn--odermimarlk-8zb.com` mülkünün eklenip DNS doğrulamasının tamamlanması ve Bing Webmaster’da Microsoft/Google hesabıyla giriş yapılması gerekir. Bu iki işlem tamamlanır tamamlanmaz sitemap gönderimi yapılabilir; mevcut statik site kodunda ek değişiklik gerekmemektedir.
+Google Search Console mülkü, HTML doğrulama dosyası ve iki doğrulama etiketiyle hazırlanmış; sitemap ve video sitemap gönderimi için panel erişimi gerekir. Bing Webmaster’da Microsoft/Google oturum akışı `oauth_failure` verdiği için panel tarafında ayrıca oturum açılması gerekir. Bu iki işlem tamamlanır tamamlanmaz sitemap gönderimi yapılabilir; mevcut statik site kodunda ek değişiklik gerekmemektedir.
