@@ -6,18 +6,16 @@ GitHub Pages yayını, özel alan adı, HTTPS zorlaması, sitemap ve çok dilli 
 
 ## Google Search Console
 
-Google hesabında Search Console açıldı ve mülk ekleme ekranına ulaşıldı. Ancak alan adı formu tarayıcı devrinde doldurulmadan kaldı; Google mülk ekleme işlemini tamamlamadı. Alan adı mülkü DNS TXT doğrulaması istediği için, mülk oluşturulmadan sitemap gönderimi yapılamaz.
+Öder Mimarlık URL ön eki mülkü `https://xn--odermimarlk-8zb.com/` doğrulandı. Google Search Console’da sitemap gönderimleri başarıyla tamamlandı:
 
-Son kontrolde Search Console hesabında `odermimarlık.com` adlı mevcut bir mülk bulunduğu, fakat açık olan `umitoder@odergroup.com.tr` hesabının bu mülke erişimi olmadığı görüldü. Google ekranı “mülkiyetinizi doğrulayın” seçeneğini gösteriyor; mülk sahibi hesap veya DNS doğrulaması olmadan URL Inspection ve sitemap gönderimi yetkisi vermiyor.
+- `/sitemap.xml` — **Başarılı**, 23 sayfa keşfedildi.
+- `/video-sitemap.xml` — **Başarılı**, 1 video ve 7 video kaynağı keşfedildi.
 
-Gönderilecek sitemap adresleri hazırdır:
-
-- `https://xn--odermimarlk-8zb.com/sitemap.xml`
-- `https://xn--odermimarlk-8zb.com/video-sitemap.xml`
+Ana sayfa için URL Inspection akışı da başlatıldı. Dizinlenme raporları Google’ın tarama zamanlamasına bağlı olarak güncellenir.
 
 ## Bing Webmaster Tools
 
-Bing Webmaster açıldı. Microsoft hesabı oturumu bulunmadığı için Google ile giriş denendi; Google OAuth akışı `oauth_failure` ile Bing’e geri döndü. Bing panelinde mülk ekleme ve sitemap gönderimi bu nedenle tamamlanamadı.
+Bing Webmaster Tools giriş ekranı açıldı; ancak aktif Microsoft/Bing oturumu bulunmadığı için mülk paneli ve sitemap gönderimi henüz tamamlanmadı. Site tarafında gerekli `sitemap.xml`, `video-sitemap.xml`, `robots.txt`, canonical, hreflang ve yapılandırılmış veri sinyalleri hazırdır. Bing oturumu açıldığında mülk eklenip aynı sitemap adresleri gönderilebilir.
 
 ## GA4 / GTM
 
