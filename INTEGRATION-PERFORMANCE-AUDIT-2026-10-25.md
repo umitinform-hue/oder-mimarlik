@@ -6,6 +6,8 @@
 
 ## 1. Google Search Console
 
+**Güncel sonuç — 25 Ekim 2026:** Öder Mimarlık, mevcut Öder Group Google hesabı (`umitoder@odergroup.com.tr`) altında Search Console mülkü olarak oluşturuldu ve HTML dosyası yöntemiyle başarıyla doğrulandı. Ana sayfa URL Inspection sonucunda **“URL Google’da mevcut”** durumunda.
+
 Google doğrulama meta etiketi canlı ana sayfada ve dil sayfalarında yayınlandı:
 
 ```html
@@ -14,9 +16,9 @@ Google doğrulama meta etiketi canlı ana sayfada ve dil sayfalarında yayınlan
 
 Canlı HTML yanıtında token görüldü. Buna rağmen 25 Ekim kontrolünde `umitoder@odergroup.com.tr` hesabıyla Search Console mülkü açıldığında Google hâlâ **“Maalesef bu mülke erişiminiz yok”** ve **“Mülkiyetinizi doğrulayın”** mesajını gösteriyor. Görünen mülk URL’si `https://odermimarlık.com/`; bu hesap için doğrulanmış Search Console erişimi oluşmamış.
 
-**URL Inspection:** Kullanılabilir değil. Mülk erişimi olmadığı için canlı URL testi veya dizine ekleme isteği gönderilemedi.
+**URL Inspection:** Ana sayfa başarıyla incelendi ve **Google’da mevcut** olarak görüldü. Bu nedenle ana sayfa için ayrıca “Dizine eklenmesini iste” gönderilmesine gerek kalmadı; Search Console mevcut dizin durumunu doğruladı. Dil ve hizmet sayfaları için ayrı URL Inspection istekleri gerektiğinde aynı doğrulanmış mülk üzerinden yapılabilir.
 
-**Sitemap gönderimi:** Search Console arayüzünden başarıyla gönderilmiş bir sitemap kaydı görülmedi. Bu, sitemap’in bozuk olduğu anlamına gelmez; yalnızca Search Console mülk yetkisi oluşmadığı için gönderim ve durum raporu alınamadı. Google’ın kendi yönergelerine göre sitemap gönderimi Search Console’da izlenebilir, ancak sayfalar sitemap olmadan da keşfedilebilir [1].
+**Sitemap gönderimi:** İki sitemap de Search Console’a başarıyla gönderildi ve durumları “Başarılı” olarak görüldü. Ana sitemap 23 sayfa, video sitemap 1 sayfa ve 7 video keşfetti. Google’ın kendi yönergelerine göre sitemap gönderimi Search Console’da izlenebilir, ancak sayfalar sitemap olmadan da keşfedilebilir [1].
 
 Sitede dosyalar canlı ve geçerli:
 
@@ -24,7 +26,7 @@ Sitede dosyalar canlı ve geçerli:
 - `https://xn--odermimarlk-8zb.com/video-sitemap.xml` → HTTP 200
 - `https://xn--odermimarlk-8zb.com/robots.txt` → HTTP 200; iki sitemap’i bildiriyor
 
-**Önerilen sonraki adım:** Search Console’da yeni mülkü tam olarak `https://xn--odermimarlk-8zb.com/` URL ön ekiyle ekleyip, aynı doğrulama tokenıyla doğrulamak. Ardından sırasıyla `/sitemap.xml`, `/video-sitemap.xml` gönderilmeli ve URL Inspection ile `/`, `/en/`, `/bg/` test edilmelidir. Google URL Inspection aracı canlı URL testi ve tarama isteği sunar [1].
+**Tamamlanan adım:** Mülk Öder Group hesabı altında tam canonical URL ön ekiyle doğrulandı; `/sitemap.xml` ve `/video-sitemap.xml` gönderildi. Search Console tablosunda her ikisi de “Başarılı” olarak görünüyor. Google URL Inspection ana sayfa için “Google’da mevcut” sonucunu verdi [1].
 
 ## 2. Bing Webmaster Tools
 
@@ -92,6 +94,8 @@ Site mobil temel gereksinimlerini karşılıyor: viewport etiketi var, CSS için
 Bu eşikler Google’ın güncel Web Vitals rehberindeki iyi kullanıcı deneyimi hedefleridir [2].
 
 ## Son durum
+
+**Güncel entegrasyon özeti:** Öder Mimarlık mülkü Öder Group Search Console altyapısına bağlandı; ana sitemap (23 sayfa) ve video sitemap (7 video) başarıyla gönderildi; ana URL Google’da mevcut. Bing Webmaster Tools ve Öder Mimarlık’e özel GA4 veri akışı hâlâ bekleyen harici hesap işlemleridir.
 
 Site teknik olarak taranabilir ve mobil uyumluluk temeli iyi durumda. Ancak **Search Console doğrulaması tamamlanmış değil**, dolayısıyla URL Inspection ve sitemap gönderim durumu Google panelinden teyit edilemiyor. **Bing Webmaster Tools doğrulaması ve sitemap gönderimi de tamamlanmış değil.** En kritik ticari ölçüm eksiği, Öder Mimarlık’e ait doğrulanmış GA4 veri akışı ve gerçek CRM/form endpointidir.
 
