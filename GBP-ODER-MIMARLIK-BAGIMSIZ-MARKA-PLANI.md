@@ -1,17 +1,18 @@
-# Öder Mimarlık — Öder Group’tan Bağımsız Google Business Profile Planı
+# Öder Mimarlık — Öder Group İçinde Google Business Profile Planı
 
 ## 1. Marka ve hesap mimarisi
 
-Bu profil **Öder Group profili değildir**. Google Business Profile üzerinde işletme adı yalnızca **Öder Mimarlık** olarak kullanılmalıdır. Öder Group, Öder Enerji veya diğer markaların adres/telefon/website sinyalleri bu profile karıştırılmamalıdır.
+Öder Mimarlık, **Öder Group’un mimarlık ve mobilya tasarımı markasıdır**. Google Business Profile tarafında yeni ve mükerrer bir işletme kaydı açmak yerine, öncelik Öder Group’un doğrulanmış Business Profile’ı içinde Öder Mimarlık hizmetlerinin marka/hizmet kolu olarak görünür kılınmasıdır. Profil adı, Google’ın yönergelerine aykırı biçimde ana işletme adına ek anahtar kelimelerle uzatılmamalıdır.
 
-- **Profil adı:** Öder Mimarlık
+- **Marka/hizmet kolu:** Öder Mimarlık
+- **Ana Business Profile:** Öder Group (mevcut doğrulanmış profil)
 - **Web sitesi:** https://xn--odermimarlk-8zb.com/
 - **Ana müşteri sayfası:** https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
 - **Telefon:** +90 534 547 22 39
 - **E-posta:** info@odergroup.com.tr
 - **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No: 2 İç Kapı No: 13, Ataşehir, İstanbul, Türkiye
 - **Marka kategorisi:** İç mimarlık / Interior designer
-- **Profil sahibi:** İşletmenin Öder Mimarlık adına yetkili Google hesabı
+- **Profil sahibi:** Öder Group Business Profile yöneticisi; Öder Mimarlık için ayrı yönetici erişimi gerekiyorsa grup hesabından atanır
 
 > Not: Google doğrulaması için gerçek işletme adresi ve işletme sahibinin erişebildiği Google hesabı gerekir. Adres doğrulanmadan profilin yayınlandığı varsayılmamalıdır.
 
@@ -19,7 +20,7 @@ Bu profil **Öder Group profili değildir**. Google Business Profile üzerinde i
 
 Öder Mimarlık; Ataşehir ve İstanbul merkezli, Türkiye ve Balkanlar’da bireysel ev dekorasyonu, iç mimarlık, ölçüye özel mobilya, mutfak dolabı, salon, çocuk odası, zemin döşeme ve özel proje çözümleri sunar. İhtiyaca göre konsept, malzeme, özel üretim ve uygulama süreçlerini birlikte değerlendirir. Projenizin fotoğraflarını ve kısa ihtiyacınızı WhatsApp üzerinden paylaşarak ön görüşme başlatabilirsiniz.
 
-Açıklamada Öder Group, Öder Enerji veya doğrulanmamış “en iyi”, “garantili”, “en ucuz” gibi iddialar kullanılmamalıdır.
+Açıklamada Öder Group, Öder Mimarlık’ın üst marka ilişkisi olarak doğal biçimde belirtilebilir; Öder Enerji veya doğrulanmamış “en iyi”, “garantili”, “en ucuz” gibi iddialar kullanılmamalıdır.
 
 ## 3. Hizmetler
 
@@ -70,15 +71,16 @@ Bu URL GA4’te `google / organic_local` ve `oder_mimarlik_gbp` kampanyasıyla i
 
 ## 7. Yayınlama sırası
 
-1. Yetkili Google hesabında yeni işletme profili oluştur.
-2. İşletme adını yalnızca “Öder Mimarlık” olarak gir.
-3. Adres, telefon, web sitesi ve kategori alanlarını yukarıdaki NAP ile doldur.
-4. Hizmet alanlarını ve hizmet listesini ekle.
-5. Profil açıklamasını yayınla.
-6. Google’ın istediği doğrulama yöntemini işletme sahibinin onayıyla tamamla.
-7. Profil URL’sini aldıktan sonra site, sitemap/SEO raporu ve GA4 UTM kontrolünü güncelle.
-8. İlk 30 gün haftada en az bir gerçek proje fotoğrafı ve bir hizmet güncellemesi yayınla.
+1. Öder Group Business Profile yöneticisinde mevcut profili aç.
+2. Yeni mükerrer profil oluşturmadan Öder Mimarlık’ı işletme açıklaması, hizmetler, ürünler/gönderiler ve fotoğraf başlıklarında grup içi marka olarak konumlandır.
+3. Öder Mimarlık landing page’ini profilin ana hizmet bağlantısı veya ilgili gönderi bağlantısı olarak ekle.
+4. Adres, telefon ve grup NAP bilgilerini mevcut doğrulanmış profil ile tutarlı tut.
+5. Hizmet alanlarını ve Öder Mimarlık hizmet listesini ekle.
+6. Profil açıklamasını Öder Group + Öder Mimarlık hiyerarşisini açıkça anlatacak şekilde güncelle.
+7. Google’ın mevcut profil için istediği doğrulama veya sahiplik adımını işletme sahibinin onayıyla tamamla.
+8. Profil bağlantısını aldıktan sonra site, sitemap/SEO raporu ve GA4 UTM kontrolünü güncelle.
+9. İlk 30 gün haftada en az bir gerçek Öder Mimarlık proje fotoğrafı ve bir hizmet güncellemesi yayınla.
 
 ## 8. Dış hesap gerektiren nokta
 
-Profil oluşturma, sahiplik ve adres doğrulaması Google hesabı üzerinde dış etkili işlemdir. Bu plan bütün alanları hazırlar; nihai “Yayınla/Doğrula” adımı işletme sahibinin yetkili hesabında gerçekleştirilmelidir.
+Business Profile yöneticiliği, hizmet/gönderi yayınlama ve sahiplik doğrulaması Google hesabı üzerinde dış etkili işlemdir. Bu plan bütün alanları hazırlar; nihai yayın ve doğrulama adımı Öder Group’un yetkili Business Profile hesabında gerçekleştirilmelidir. Mükerrer Öder Mimarlık profili açılması önerilmez; ayrı profil ancak Google’ın ayrı ve gerçek bir işletme/konum koşulları karşılanıyorsa değerlendirilmelidir.

@@ -1,8 +1,13 @@
-# Öder Mimarlık — Google Maps ve Yerel SEO Paketi
+# Öder Mimarlık — Öder Group İçinde Google Maps ve Yerel SEO Paketi
 
-## Sabit NAP
+## Marka mimarisi ve sabit NAP
 
-- **İşletme adı:** Öder Mimarlık
+Öder Mimarlık, Öder Group’un mimarlık ve mobilya tasarımı markasıdır. Google Business Profile tarafında mükerrer ayrı kayıt açmak yerine Öder Group’un mevcut doğrulanmış profili içinde hizmet kolu, gönderi ve fotoğraf içerikleriyle görünürlük sağlanmalıdır.
+
+
+
+- **Hizmet kolu / marka:** Öder Mimarlık
+- **Ana Business Profile:** Öder Group
 - **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No: 2 İç Kapı No: 13, Ataşehir, İstanbul, Türkiye
 - **Telefon:** +90 534 547 22 39
 - **E-posta:** info@odergroup.com.tr
@@ -25,8 +30,8 @@ Gerçek saha fotoğrafları kullanılmalıdır: mutfak montajı, salon/TV duvar�
 
 Google Business Profile web bağlantısı:
 
-`https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=gbp_home_decor`
+`https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
 
 ## Hesap gerektiren blok
 
-Google Business Profile sahipliği, adres doğrulaması ve Maps üzerinde yayınlama için işletme sahibinin Google hesabı ve doğrulama akışı gerekir. Bu paket site tarafındaki NAP/schema/landing hazırlığını tamamlar; doğrulanmamış bir profil varmış gibi raporlanmamalıdır.
+Google Business Profile sahipliği, adres doğrulaması ve Maps üzerinde yayınlama için Öder Group’un işletme sahibi Google hesabı ve doğrulama akışı gerekir. Bu paket site tarafındaki NAP/schema/landing hazırlığını tamamlar; mükerrer Öder Mimarlık profili veya doğrulanmamış bir profil varmış gibi raporlanmamalıdır.
