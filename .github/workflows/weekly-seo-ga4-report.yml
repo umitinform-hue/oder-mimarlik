@@ -1,0 +1,39 @@
+name: Weekly Öder Mimarlık SEO + GA4 report
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install reporting dependencies
+        run: pip install google-analytics-data google-api-python-client google-auth requests
+
+      - name: Generate Search Console and GA4 report
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: 'https://xn--odermimarlk-8zb.com/'
+          LANDING_URL: 'https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/'
+        run: python scripts/weekly_seo_ga4_report.py
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: oder-mimarlik-weekly-seo-ga4-report
+          path: reports/weekly-seo-ga4-report.md
+          if-no-files-found: error
