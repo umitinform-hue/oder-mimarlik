@@ -36,7 +36,7 @@
 <script>
 const track=(name,params={})=>{const detail={event:'oder_'+name,hostname:location.hostname,page_path:location.pathname,...params};window.dataLayer.push(detail);if(typeof window.gtag==='function')window.gtag('event','oder_'+name,detail)};
 document.querySelector('#year').textContent=new Date().getFullYear();
-document.querySelectorAll('[data-track]').forEach(a=>a.addEventListener('click',()=>track(a.dataset.track,{href:a.href})));
+document.querySelectorAll('[data-track]').forEach(a=>a.addEventListener('click',()=>{const source=a.dataset.track;const eventName=source==='hero_whatsapp'||source==='floating_whatsapp'?'whatsapp_click':source;track(eventName,{href:a.href,source,service:'bireysel_ev_dekorasyonu',city:'not_selected',lead_method:eventName==='whatsapp_click'?'whatsapp':'form_anchor'})}));
 document.querySelector('#project-form').addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;if(!form.checkValidity()){form.reportValidity();track('form_validation_error');return}const data=new FormData(form);const msg=['Merhaba Öder Mimarlık, bireysel ev dekorasyonu projem için ön görüşme talep ediyorum.',`Ad: ${data.get('name')}`,`Telefon: ${data.get('phone')}`,`Şehir: ${data.get('city')}`,`İhtiyaç: ${data.get('service')}`,`Not: ${data.get('message')||'-'}`].join('\n');track('generate_lead',{lead_method:'whatsapp',service:data.get('service'),city:data.get('city')});track('whatsapp_click',{source:'bireysel_ev_dekorasyonu'});document.querySelector('#status').textContent='WhatsApp açılıyor; fotoğraflarınızı sohbet ekranında ekleyebilirsiniz.';window.open('https://wa.me/905345472239?text='+encodeURIComponent(msg),'_blank','noopener,noreferrer')});
 </script>
 </body></html>
