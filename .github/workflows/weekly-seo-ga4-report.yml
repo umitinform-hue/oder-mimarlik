@@ -23,6 +23,16 @@ jobs:
       - name: Install reporting dependencies
         run: pip install google-analytics-data google-api-python-client google-auth requests
 
+      - name: Verify Google API credentials
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$GA4_PROPERTY_ID" ] || [ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            echo "::error::GA4_PROPERTY_ID ve GOOGLE_SERVICE_ACCOUNT_JSON repository secrets eksik. GitHub Actions kurulum dokümanını uygulayın."
+            exit 1
+          fi
+
       - name: Generate Search Console and GA4 report
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
