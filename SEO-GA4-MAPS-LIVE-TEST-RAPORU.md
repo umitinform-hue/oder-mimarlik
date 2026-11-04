@@ -4,9 +4,9 @@
 
 ## Canlı URL’ler
 
-- Ana site: https://xn--odermimarlk-8zb.com/
-- Landing: https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
-- Sitemap: https://xn--odermimarlk-8zb.com/sitemap.xml
+- Ana site: https://odermimarlik.com/
+- Landing: https://odermimarlik.com/bireysel-ev-dekorasyonu/
+- Sitemap: https://odermimarlik.com/sitemap.xml
 - Öder Group: https://www.odergroup.com.tr/
 
 ## Test özeti
@@ -49,7 +49,7 @@ Schema’daki `hasMap` bağlantısı:
 
 Google Maps URL’sine UTM parametresi eklemek yerine UTM, Maps profilinden siteye giden landing URL’sine eklenmiştir. Böylece Maps içindeki web tıklaması GA4’te ölçülebilir:
 
-`https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
+`https://odermimarlik.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
 
 ## GA4 kontrolü
 

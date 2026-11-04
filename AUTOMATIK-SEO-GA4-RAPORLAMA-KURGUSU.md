@@ -8,7 +8,7 @@ Her pazartesi 09:00’da Öder Mimarlık landing page’i için Türkçe perform
 
 Search Console bölümünde landing URL’sinin canlı test sonucu, indeksleme durumu, sitemap durumu ve mevcutsa son 7/28 günlük tıklama, gösterim, CTR, ortalama konum ve sorgular raporlanır. “İndeksleme isteği gönderildi” ile “dizine eklendi” ayrı durumlar olarak yazılır.
 
-GA4 bölümünde `xn--odermimarlk-8zb.com` hostname’i için son 7/28 günlük aktif kullanıcı, oturum, landing page görüntüleme, şehir, kaynak/medium ve kampanya değerleri raporlanır. `oder_generate_lead`, `oder_whatsapp_click`, `oder_hero_lead` ve `oder_form_validation_error` olayları ayrı gösterilir. `manus_test`, `qa` ve benzeri test kampanyaları gerçek müşteri dönüşümü olarak sayılmaz.
+GA4 bölümünde `odermimarlik.com` hostname’i için son 7/28 günlük aktif kullanıcı, oturum, landing page görüntüleme, şehir, kaynak/medium ve kampanya değerleri raporlanır. `oder_generate_lead`, `oder_whatsapp_click`, `oder_hero_lead` ve `oder_form_validation_error` olayları ayrı gösterilir. `manus_test`, `qa` ve benzeri test kampanyaları gerçek müşteri dönüşümü olarak sayılmaz.
 
 Yerel SEO bölümünde Öder Group Business Profile içindeki Öder Mimarlık hizmet kolunun kategori/hizmet güncellemeleri, Maps’ten landing page’e gelen `oder_mimarlik_gbp` kampanyası ve NAP tutarlılığı takip edilir.
 

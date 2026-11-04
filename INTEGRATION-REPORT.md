@@ -2,11 +2,11 @@
 
 ## Sonuç özeti
 
-GitHub Pages yayını, özel alan adı, HTTPS zorlaması, sitemap ve çok dilli statik SEO rotaları çalışır durumdadır. Alan adı `https://xn--odermimarlk-8zb.com/` üzerinden HTTPS ile 200 yanıtı vermektedir.
+GitHub Pages yayını, özel alan adı, HTTPS zorlaması, sitemap ve çok dilli statik SEO rotaları çalışır durumdadır. Alan adı `https://odermimarlik.com/` üzerinden HTTPS ile 200 yanıtı vermektedir.
 
 ## Google Search Console
 
-Öder Mimarlık URL ön eki mülkü `https://xn--odermimarlk-8zb.com/` doğrulandı. Google Search Console’da sitemap gönderimleri başarıyla tamamlandı:
+Öder Mimarlık URL ön eki mülkü `https://odermimarlik.com/` doğrulandı. Google Search Console’da sitemap gönderimleri başarıyla tamamlandı:
 
 - `/sitemap.xml` — **Başarılı**, 23 sayfa keşfedildi.
 - `/video-sitemap.xml` — **Başarılı**, 1 video ve 7 video kaynağı keşfedildi.

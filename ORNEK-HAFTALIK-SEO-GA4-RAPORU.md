@@ -4,7 +4,7 @@
 
 **Rapor tarihi:** 03 Kasım 2026
 **Dönem:** 27 Ekim–02 Kasım 2026
-**Landing:** https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
+**Landing:** https://odermimarlik.com/bireysel-ev-dekorasyonu/
 
 ## Özet
 
@@ -32,7 +32,7 @@ Landing page canlı, HTTP 200 ve sitemap içinde. Search Console tarafında URL 
 | Direkt | 2 oturum |
 | Referral | 1 oturum |
 
-Hostname filtresi: `xn--odermimarlk-8zb.com`. Öder Group toplam property verisi bu tabloya dahil edilmemiştir.
+Hostname filtresi: `odermimarlik.com`. Öder Group toplam property verisi bu tabloya dahil edilmemiştir.
 
 ## Lead ve WhatsApp olayları
 

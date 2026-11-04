@@ -11,8 +11,8 @@
 - **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No: 2 İç Kapı No: 13, Ataşehir, İstanbul, Türkiye
 - **Telefon:** +90 534 547 22 39
 - **E-posta:** info@odergroup.com.tr
-- **Web:** https://xn--odermimarlk-8zb.com/
-- **Bireysel hizmet sayfası:** https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
+- **Web:** https://odermimarlik.com/
+- **Bireysel hizmet sayfası:** https://odermimarlik.com/bireysel-ev-dekorasyonu/
 
 ## Google Business Profile açıklaması
 
@@ -30,7 +30,7 @@ Gerçek saha fotoğrafları kullanılmalıdır: mutfak montajı, salon/TV duvar�
 
 Google Business Profile web bağlantısı:
 
-`https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
+`https://odermimarlik.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
 
 ## Hesap gerektiren blok
 

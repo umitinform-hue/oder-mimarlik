@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://xn--odermimarlk-8zb.com/sitemap.xml
-Sitemap: https://xn--odermimarlk-8zb.com/video-sitemap.xml
+Sitemap: https://odermimarlik.com/sitemap.xml
+Sitemap: https://odermimarlik.com/video-sitemap.xml

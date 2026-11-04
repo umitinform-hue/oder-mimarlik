@@ -5,7 +5,7 @@
 - **Ana Business Profile:** Öder Group
 - **Grup içi hizmet kolu:** Öder Mimarlık
 - **Ana profil adı:** Google’daki mevcut doğrulanmış işletme adı korunmalı; profile anahtar kelime doldurularak “Öder Group Öder Mimarlık İstanbul İç Mimarlık Mobilya” gibi yapay bir ad verilmemeli.
-- **Hizmet landing page:** `https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/`
+- **Hizmet landing page:** `https://odermimarlik.com/bireysel-ev-dekorasyonu/`
 - **Ana hizmet ölçümü:** `utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
 
 ## Kategori seçimi

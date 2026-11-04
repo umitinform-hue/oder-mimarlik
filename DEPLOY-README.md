@@ -1,6 +1,6 @@
 # Öder Mimarlık — GitHub Pages launch package
 
-Bu paket `umitinform-hue/oder-mimarlik` canlı kaynağı üzerinden hazırlanmıştır. `CNAME` dosyası korunmuştur: `xn--odermimarlk-8zb.com`.
+Bu paket `umitinform-hue/oder-mimarlik` canlı kaynağı üzerinden hazırlanmıştır. `CNAME` dosyası korunmuştur: `odermimarlik.com`.
 
 ## İçerik
 

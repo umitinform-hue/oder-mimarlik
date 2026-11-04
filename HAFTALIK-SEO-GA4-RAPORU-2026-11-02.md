@@ -2,13 +2,13 @@
 
 **Rapor tarihi:** 02 Kasım 2026
 **Landing:** https://odermimarlik.com/bireysel-ev-dekorasyonu/
-**İstenen URL:** https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
+**İstenen URL:** https://odermimarlik.com/bireysel-ev-dekorasyonu/
 
 ## Özet
 
 Canonical alan adı olan `https://odermimarlik.com/bireysel-ev-dekorasyonu/` canlı kontrolde HTTP 200 döndürüyor, landing içeriği, CTA’lar, form ve FAQ bölümü yükleniyor. Sitemap içinde landing URL’si mevcut.
 
-Kritik bulgu: Kullanıcının verdiği Punycode URL (`xn--odermimarlk-8zb.com`) standart HTTP istemcisinde landing path için HTTP 404 ve “Yönlendiriliyor…” noindex şablonu döndürüyor. JavaScript destekli tarayıcı sayfayı canonical domain’e taşıyabiliyor; ancak crawler ve bazı sosyal önizleme istemcileri JavaScript çalıştırmayabilir. Bu nedenle Punycode alan adından canonical alan adına sunucu seviyesinde 301 yönlendirme veya GitHub Pages custom-domain yapılandırması düzeltilmelidir.
+Kritik bulgu: Kullanıcının verdiği Punycode URL (`odermimarlik.com`) standart HTTP istemcisinde landing path için HTTP 404 ve “Yönlendiriliyor…” noindex şablonu döndürüyor. JavaScript destekli tarayıcı sayfayı canonical domain’e taşıyabiliyor; ancak crawler ve bazı sosyal önizleme istemcileri JavaScript çalıştırmayabilir. Bu nedenle Punycode alan adından canonical alan adına sunucu seviyesinde 301 yönlendirme veya GitHub Pages custom-domain yapılandırması düzeltilmelidir.
 
 Google hesap oturumu bu çalıştırmada yeniden giriş ekranına düştüğü için 02 Kasım’a ait yeni GA4 ve Search Console panel verileri doğrulanamadı. Aşağıdaki GA4/Search Console rakamları “son doğrulanabilir snapshot” olarak ayrıca etiketlenmiştir; yeni rapor dönemi verisi gibi sunulmamıştır.
 
@@ -58,7 +58,7 @@ Bu değerler 02 Kasım’ın yeni ölçümü olarak değil, son doğrulanabilir 
 
 GA4 hesabı bu çalıştırmada giriş ekranına yönlendiği için Öder Mimarlık hostname ve landing path filtreli yeni 7/28 günlük veriler alınamadı. Aşağıdaki metrikler bu nedenle **doğrulanamadı**:
 
-- `xn--odermimarlk-8zb.com` hostname’i için son 7 gün aktif kullanıcı
+- `odermimarlik.com` hostname’i için son 7 gün aktif kullanıcı
 - Son 28 gün aktif kullanıcı
 - `/bireysel-ev-dekorasyonu/` görüntüleme sayısı
 - Landing kaynak/medium dağılımı
@@ -126,7 +126,7 @@ CTA standardizasyonu `6462f72` commit’inde yapıldı. Ancak GA4 paneli erişil
 Punycode custom domain için server-level 301 yönlendirmesi kurulmalı veya GitHub Pages custom domain/CNAME yapılandırması, hem Punycode hem Unicode alan adında aynı dosya ağacını sunacak şekilde düzeltilmelidir. Hedef:
 
 ```text
-https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
+https://odermimarlik.com/bireysel-ev-dekorasyonu/
 → 301 → https://odermimarlik.com/bireysel-ev-dekorasyonu/
 ```
 
@@ -141,7 +141,7 @@ Canonical etiketleri erişilebilir ve tekil canonical domain olan `https://oderm
 GA4’te şu koşullarla landing özel rapor kaydedilmeli:
 
 ```text
-hostname = odermimarlik.com veya xn--odermimarlk-8zb.com
+hostname = odermimarlik.com veya odermimarlik.com
 page_path = /bireysel-ev-dekorasyonu/
 ```
 

@@ -1,7 +1,7 @@
 # Öder Mimarlık — Entegrasyon ve Mobil Performans Denetimi
 
-**Denetim tarihi:** 25 Ekim 2026  
-**Canlı adres:** https://xn--odermimarlk-8zb.com/  
+**Denetim tarihi:** 25 Ekim 2026
+**Canlı adres:** https://odermimarlik.com/
 **GitHub Pages deposu:** `umitinform-hue/oder-mimarlik`
 
 ## 1. Google Search Console
@@ -22,9 +22,9 @@ Canlı HTML yanıtında token görüldü. Buna rağmen 25 Ekim kontrolünde `umi
 
 Sitede dosyalar canlı ve geçerli:
 
-- `https://xn--odermimarlk-8zb.com/sitemap.xml` → HTTP 200, 23 URL
-- `https://xn--odermimarlk-8zb.com/video-sitemap.xml` → HTTP 200
-- `https://xn--odermimarlk-8zb.com/robots.txt` → HTTP 200; iki sitemap’i bildiriyor
+- `https://odermimarlik.com/sitemap.xml` → HTTP 200, 23 URL
+- `https://odermimarlik.com/video-sitemap.xml` → HTTP 200
+- `https://odermimarlik.com/robots.txt` → HTTP 200; iki sitemap’i bildiriyor
 
 **Tamamlanan adım:** Mülk Öder Group hesabı altında tam canonical URL ön ekiyle doğrulandı; `/sitemap.xml` ve `/video-sitemap.xml` gönderildi. Search Console tablosunda her ikisi de “Başarılı” olarak görünüyor. Google URL Inspection ana sayfa için “Google’da mevcut” sonucunu verdi [1].
 
@@ -39,8 +39,8 @@ Sitede dosyalar canlı ve geçerli:
 
 Bing hesabı için canlı sitede gerekli sitemap ve robots altyapısı hazır. Harici hesap oturumu açıldıktan sonra site eklenmeli, doğrulama yapılmalı ve şu iki sitemap gönderilmelidir:
 
-- `https://xn--odermimarlk-8zb.com/sitemap.xml`
-- `https://xn--odermimarlk-8zb.com/video-sitemap.xml`
+- `https://odermimarlik.com/sitemap.xml`
+- `https://odermimarlik.com/video-sitemap.xml`
 
 ## 3. Diğer harici entegrasyonlar
 

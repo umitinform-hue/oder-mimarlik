@@ -6,8 +6,8 @@
 
 - **Marka/hizmet kolu:** Öder Mimarlık
 - **Ana Business Profile:** Öder Group (mevcut doğrulanmış profil)
-- **Web sitesi:** https://xn--odermimarlk-8zb.com/
-- **Ana müşteri sayfası:** https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/
+- **Web sitesi:** https://odermimarlik.com/
+- **Ana müşteri sayfası:** https://odermimarlik.com/bireysel-ev-dekorasyonu/
 - **Telefon:** +90 534 547 22 39
 - **E-posta:** info@odergroup.com.tr
 - **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No: 2 İç Kapı No: 13, Ataşehir, İstanbul, Türkiye
@@ -65,7 +65,7 @@ Dosya adları hizmeti ve konumu doğal biçimde açıklamalı; görsel üzerinde
 
 Google Business Profile web bağlantısı:
 
-`https://xn--odermimarlk-8zb.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
+`https://odermimarlik.com/bireysel-ev-dekorasyonu/?utm_source=google&utm_medium=organic_local&utm_campaign=oder_mimarlik_gbp`
 
 Bu URL GA4’te `google / organic_local` ve `oder_mimarlik_gbp` kampanyasıyla izlenmelidir. Öder Group kampanyalarıyla aynı UTM kampanyası kullanılmamalıdır.
 

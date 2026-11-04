@@ -20,7 +20,7 @@ Bu dosya, üçüncü taraf hesaplarda ilan açılırken kullanılacak hazır met
 
 Projenin konumu, yaklaşık alanı, hedeflenen teslim tarihi ve istenen kapsamı paylaşmanız ilk değerlendirme için yeterlidir. Türkiye ve Balkan ülkelerindeki proje talepleri; üretim, nakliye ve uygulama koşullarına göre değerlendirilir.
 
-**İletişim:** +90 534 547 22 39 · info@odergroup.com.tr · https://xn--odermimarlk-8zb.com/
+**İletişim:** +90 534 547 22 39 · info@odergroup.com.tr · https://odermimarlik.com/
 
 ## Yayın kuralları
 
