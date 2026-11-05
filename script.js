@@ -1,4 +1,6 @@
 const CONTACT_EMAIL = "info@odergroup.com.tr";
+// Set this to the real Formspree endpoint after creating the business form.
+const FORM_ENDPOINT = "";
 const scriptElement=[...document.scripts].find((script)=>script.src.includes("/script.js"));
 const siteRoot=scriptElement?new URL("./",scriptElement.src):new URL("./",location.href);
 const assetUrl=(path)=>new URL(path,siteRoot).pathname;
@@ -92,4 +94,33 @@ document.querySelector('#use-estimate').addEventListener('click',()=>{track('cal
   const message=document.querySelector('[name="message"]');message.value=`${summary}\n\nİhtiyacım / proje notlarım: `;document.querySelector('#iletisim').scrollIntoView({behavior:'smooth'});message.focus();
 });
 
-const contactForm=document.querySelector('#contact-form');let formStarted=false;contactForm.addEventListener('focusin',()=>{if(!formStarted){formStarted=true;track('form_start')}});contactForm.addEventListener('submit',event=>{track('form_submit');event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;track('generate_lead');const data=new FormData(form);if(!CONTACT_EMAIL){document.querySelector('.form-feedback').textContent='Talep taslağı hazır. Gönderimi açmak için yayından önce doğrulanmış kurumsal e-posta adresini script.js içindeki CONTACT_EMAIL alanına ekleyin.';return}const subject=encodeURIComponent(`Web sitesi proje talebi — ${data.get('name')}`);const body=encodeURIComponent(`Ad: ${data.get('name')}\nE-posta: ${data.get('email')}\nTelefon: ${data.get('phone')||'Belirtilmedi'}\nKonum: ${data.get('location')}\n\nProje: ${data.get('message')}`);window.location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;document.querySelector('.form-feedback').textContent='E-posta taslağı oluşturuldu. İletmek için e-posta uygulamanızdan gönderin.'});
+const contactForm=document.querySelector('#contact-form');
+let formStarted=false;
+contactForm.addEventListener('focusin',()=>{if(!formStarted){formStarted=true;track('form_start')}});
+contactForm.addEventListener('submit',async event=>{
+  event.preventDefault();
+  const form=event.currentTarget;
+  if(!form.reportValidity()) return;
+  const data=new FormData(form);
+  const feedback=document.querySelector('.form-feedback');
+  const payload={name:data.get('name'),email:data.get('email'),phone:data.get('phone')||'',location:data.get('location'),message:data.get('message'),kvkk_consent:data.get('kvkk_consent')==='accepted'?'accepted':'not_accepted',page_url:location.href};
+  const subject=encodeURIComponent(`Web sitesi proje talebi — ${payload.name}`);
+  const body=encodeURIComponent(`Ad: ${payload.name}\nE-posta: ${payload.email}\nTelefon: ${payload.phone||'Belirtilmedi'}\nKonum: ${payload.location}\n\nProje: ${payload.message}`);
+  if(FORM_ENDPOINT){
+    const submitButton=form.querySelector('button[type="submit"]');
+    submitButton.disabled=true; feedback.textContent='Talebiniz gönderiliyor…';
+    try{
+      const response=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)});
+      if(!response.ok) throw new Error('form_endpoint_failed');
+      track('generate_lead',{lead_method:'formspree',service:'genel_proje_talebi',city:payload.location});
+      feedback.textContent='Talebiniz ulaştı. En kısa sürede sizinle iletişime geçeceğiz.'; form.reset();
+    }catch(error){
+      feedback.textContent='Gönderim şu anda tamamlanamadı. WhatsApp’tan yazabilir veya e-posta taslağını kullanabilirsiniz.';
+    }finally{submitButton.disabled=false}
+    return;
+  }
+  // Until a real provider endpoint is configured, preserve a transparent fallback without counting a lead.
+  if(!CONTACT_EMAIL){feedback.textContent='Form sağlayıcısı henüz yapılandırılmadı. WhatsApp’tan yazabilirsiniz.';return}
+  window.location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  feedback.textContent='E-posta taslağı oluşturuldu. İletmek için e-posta uygulamanızdan gönderin.';
+});
