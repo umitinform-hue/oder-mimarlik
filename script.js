@@ -1,6 +1,6 @@
 const CONTACT_EMAIL = "info@odergroup.com.tr";
-// Set this to the real Formspree endpoint after creating the business form.
-const FORM_ENDPOINT = "";
+// Öder Mimarlık Proje Talebi — Formspree endpoint.
+const FORM_ENDPOINT = "https://formspree.io/f/xqpqkdpr";
 const scriptElement=[...document.scripts].find((script)=>script.src.includes("/script.js"));
 const siteRoot=scriptElement?new URL("./",scriptElement.src):new URL("./",location.href);
 const assetUrl=(path)=>new URL(path,siteRoot).pathname;
