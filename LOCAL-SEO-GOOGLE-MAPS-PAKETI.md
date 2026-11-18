@@ -8,7 +8,7 @@
 
 - **Hizmet kolu / marka:** Öder Mimarlık
 - **Ana Business Profile:** Öder Group
-- **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No: 2 İç Kapı No: 13, Ataşehir, İstanbul, Türkiye
+- **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No:2 İç Kapı:13, 34746 Ataşehir / İstanbul, Türkiye
 - **Telefon:** +90 534 547 22 39
 - **E-posta:** info@odergroup.com.tr
 - **Web:** https://odermimarlik.com/
