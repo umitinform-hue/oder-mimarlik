@@ -106,7 +106,7 @@ contactForm.addEventListener('submit',async event=>{
   const feedback=document.querySelector('.form-feedback');
   const payload={name:data.get('name'),email:data.get('email'),phone:data.get('phone')||'',location:data.get('location'),message:data.get('message'),kvkk_consent:data.get('kvkk_consent')==='accepted'?'accepted':'not_accepted',page_url:location.href};
   const subject=encodeURIComponent(`Web sitesi proje talebi — ${payload.name}`);
-  const body=encodeURIComponent(`Ad: ${payload.name}\nE-posta: ${payload.email}\nTelefon: ${payload.phone||'Belirtilmedi'}\nKonum: ${payload.location}\n\nProje: ${payload.message}`);
+  const body=encodeURIComponent(`Ad: ${payload.name}\nE-posta: ${payload.email||'Belirtilmedi'}\nTelefon: ${payload.phone||'Belirtilmedi'}\nKonum: ${payload.location}\n\nProje: ${payload.message}`);
   if(FORM_ENDPOINT){
     const submitButton=form.querySelector('button[type="submit"]');
     submitButton.disabled=true; feedback.textContent=tx('Talebiniz gönderiliyor…');

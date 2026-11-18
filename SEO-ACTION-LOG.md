@@ -46,3 +46,10 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - Hizmet sayfalarında ortak KAPSAM ve ilk 3 SSS sayfaya özgü yazıldı; mobilya-dekorasyon sayfasının odağı ayrıştırıldı.
 - 11 dil sayfasında kalan Türkçe (statik + betikle üretilen) çevrildi; `i18n/<dil>.js` eklendi; ana ve dil sayfalarında FAQPage görünür SSS ile eşlendi.
 - Türkçe ana sayfanın Türkçe olmayan tarayıcıda İngilizceye dönmesi kaldırıldı. Ayrıntı: `OTOMASYON-DURUM.md`.
+
+## 2026-11-19 — Kullanıcı kararları
+
+- Müşteri adı tüm yayın içeriğinden kaldırıldı; video başlığı "Tekstil fuarı standı — ev tekstili ve perde teşhiri" oldu (videos.js, hizmet sayfası, VideoObject, video-sitemap.xml, i18n ×11).
+- B2B bölümündeki Bauhaus/IKEA cümlesi 12 sayfadan kaldırıldı.
+- İletişim formu: telefon zorunlu, e-posta isteğe bağlı (12 sayfa); e-posta boşsa mailto yedeğinde "Belirtilmedi" yazılıyor.
+- GA4 rapor iş akışının pazartesi zamanlaması kapatıldı; workflow_dispatch korunuyor.
