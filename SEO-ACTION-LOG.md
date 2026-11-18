@@ -40,3 +40,9 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - 68 büyük görsel için WebP kopyası; sayfa, galeri ve poster referansları WebP (orijinaller duruyor).
 - Dil sayfalarında yanlış gizlilik notu düzeltildi; form, iletişim metni, 10 H2 ve sabit çubuk çevrildi.
 - Hizmet sayfalarına sabit "Ara / WhatsApp" çubuğu eklendi. Ayrıntı: `OTOMASYON-DURUM.md`.
+
+## 18 Kasım 2026 — Tur 4 (proje sohbetinden elle)
+
+- Hizmet sayfalarında ortak KAPSAM ve ilk 3 SSS sayfaya özgü yazıldı; mobilya-dekorasyon sayfasının odağı ayrıştırıldı.
+- 11 dil sayfasında kalan Türkçe (statik + betikle üretilen) çevrildi; `i18n/<dil>.js` eklendi; ana ve dil sayfalarında FAQPage görünür SSS ile eşlendi.
+- Türkçe ana sayfanın Türkçe olmayan tarayıcıda İngilizceye dönmesi kaldırıldı. Ayrıntı: `OTOMASYON-DURUM.md`.
