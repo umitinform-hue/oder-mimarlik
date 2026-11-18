@@ -34,3 +34,9 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - 11 hizmet sayfasına sayfaya özgü "Hizmet ayrıntısı", "Teklif için" bölümleri, fayda satırı, +2 SSS ve FAQPage şeması eklendi (294–305 → 464–508 kelime).
 - Dil sayfalarında Türkçe dışı tarayıcıda içerik İngilizceye dönüyordu; `script.js` otomatik dil geçişi yalnız `lang="tr"` sayfada çalışacak şekilde sınırlandı.
 - Dil sayfalarında menü, hero CTA, 3 H2 ve 6 kart başlığı çevrildi; /me/ `lang` → `sr-ME`; adres tek biçime getirildi (posta kodu 34746). Ayrıntı: `OTOMASYON-DURUM.md`.
+
+## 18 Kasım 2026 — Otomasyon turu 3 (elle başlatılan sınama)
+
+- 68 büyük görsel için WebP kopyası; sayfa, galeri ve poster referansları WebP (orijinaller duruyor).
+- Dil sayfalarında yanlış gizlilik notu düzeltildi; form, iletişim metni, 10 H2 ve sabit çubuk çevrildi.
+- Hizmet sayfalarına sabit "Ara / WhatsApp" çubuğu eklendi. Ayrıntı: `OTOMASYON-DURUM.md`.

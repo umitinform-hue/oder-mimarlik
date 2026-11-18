@@ -1,6 +1,6 @@
 # Öder Mimarlık — Otomasyon Durumu (SEO / AIO / CRO)
 
-Son doğrulama tarihi: 18 Kasım 2026 (tur 2, zamanlanmış)
+Son doğrulama tarihi: 18 Kasım 2026 (tur 3, elle başlatılan sınama turu)
 Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 
 ## Durum
@@ -11,6 +11,8 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 | SEO içerik-otorite | Zayıf | Zayıf | Orta− | Hizmet sayfaları 294–305 → 464–508 kelime; dış profil/yorum yok |
 | AIO | Orta | Orta+ | Orta+ | 11 FAQPage; adreste posta kodu; GBP/yorum yok |
 | CRO | Orta | Orta+ | Orta+ | Hizmet sayfalarında fayda satırı ve ikinci CTA; mobil sabit CTA yok |
+
+Tur 3 (18 Kas 19:22): SEO teknik İyi; içerik Orta−; AIO Orta+; CRO İyi− (hizmet sayfalarında sabit CTA, dil sayfası formu kendi dilinde).
 
 ## TAMAMLANDI
 
@@ -38,16 +40,24 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 | 5 | /me/ `lang="me"` | aynı | 13 → 0 (`sr-ME`) |
 | — | Adres iki farklı biçimde, posta kodu yok | aynı | görünür 12 + şema 25 + .md 2 tek biçime; postalCode 0 → 25 |
 
+| 3 | 150 KB üstü görseller | 18 Kas tur 3, `otomasyon/seo-aio-cro-2026-11-18c` | 68 WebP kopyası; 14735 → 6351 KB; img src 168 + galeri 65 + poster 23 referans WebP; ana sayfa görsel aktarımı (390 px, kaydırmalı) 3075 → 1882 KB; hizmet sayfası 251 → 133 KB |
+| — | photos.js alt alanında iç not "Serkan klasöründen…" | aynı | 65 → 0 |
+| — | Dil sayfalarında yanlış gizlilik notu ("e-posta taslağı… yayına almadan önce doğrulanmalıdır") — 18 Kas tur 1'de kaçmıştı | aynı | 11 → 0 |
+| 2 (kısmi) | Dil sayfalarında form, iletişim metni, 10 H2, sabit çubuk | aynı | 11 × 26 = 286 öğe; Türkçe görünür parça (bg) 228 → 201 |
+| 4 | Hizmet sayfalarında mobil sabit CTA yok | aynı | 0 → 11 |
+
 ## BEKLEYEN (öncelik sırasıyla)
 
-1. **KRİTİK – Dil sayfalarında kalan Türkçe**: eyebrow'lar, kart açıklamaları, görsel alt metinleri, 10 H2, form ve fiyat hesaplayıcı etiketleri (menü/CTA/3 H2/kart başlıkları 18 Kas'ta yapıldı). `locale-content.js`'te bu metinlerin çevirisi yok; yeni çeviri gerekir. Bekleme: 2 tur → sonraki turda zorunlu (ERTELEME YASAĞI).
-2. **UYARI – Büyük görseller**: 150 KB üstü JPG/PNG. WebP + width/height. Bekleme: 2 tur → sonraki turda zorunlu.
-3. **UYARI – Ana sayfa formu** alan sayısı gözden geçirme. Bekleme: 2 tur → sonraki turda zorunlu (en azından ölçüm ve öneri).
-4. **UYARI – Hizmet sayfalarında mobilde sabit telefon/WhatsApp CTA yok** (ana ve dil sayfalarında var). Bekleme: 0 tur.
-5. **UYARI – Hizmet sayfalarında ortak "KAPSAM" bölümü ve ilk 3 SSS 11 sayfada birebir aynı** (yinelenen metin). Bekleme: 0 tur.
-6. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
+1. **KRİTİK – Dil sayfalarında kalan Türkçe** (sayfa başına ~200 parça / ~1130 kelime: tasarım laboratuvarı, hizmet kartı açıklamaları, fiyat hesaplayıcı, süreç, SSS, alt metinler, aria-label'lar, script.js form mesajları). Tur 1–3'te menü, CTA, 13 H2, form ve kartlar yapıldı. Engel: 11 dil × ~1100 kelime bir turda güvenli çevrilemiyor; her tur bir blok (sırada: SSS + süreç, sonra hesaplayıcı). Bekleme: 3 tur (kısmi ilerleme her turda).
+2. **UYARI – Ana sayfa formu**: e-posta zorunlu, telefon isteğe bağlı; kalite kapısı "ad, telefon, şehir, mekân türü, ihtiyaç, not" diyor. Zorunlu alan değişikliği dönüşümü etkileyeceği için KULLANICI KARARI'na taşındı. Bekleme: 3 tur.
+3. **UYARI – Hizmet sayfalarında ortak "KAPSAM" bölümü ve ilk 3 SSS 11 sayfada birebir aynı**. Bekleme: 1 tur.
+4. **UYARI – Büyük kaynak logolar** (assets/logo/*-source.png, 1,7–1,9 MB) hiçbir sayfada kullanılmıyor; silme yasak, dokunulmadı. og:image ve şema görselleri bilinçli olarak JPG bırakıldı.
+5. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
 
 ## KULLANICI KARARI BEKLEYEN
+
+- **Görünür metinde üçüncü taraf marka adları**: ana ve dil sayfalarındaki B2B bölümünde "Bauhaus, IKEA ve benzeri markaların satın alma… ekipleri" cümlesi (12 sayfa). Kural gereği otomasyon silmedi ve çevirmedi; kaldırılması/yeniden yazılması için onay bekleniyor.
+- Ana sayfa formunda e-posta yerine telefonun zorunlu olması (kalite kapısı önerisi) — karar bekleniyor.
 
 - Öder Mimarlık'a ait Google İşletme Profili bağlantısı (varsa) — bilgi bekleniyor.
 - Diğer sosyal profiller (Instagram dışında) — bilgi bekleniyor.
@@ -92,6 +102,9 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 - 18 Kas (tur 2): `locale-content.js` hiçbir sayfada yüklenmiyordu; durum dosyası aksini varsayıyordu → kural: bir dosyanın etkisini varsaymadan önce hangi sayfaların yüklediğini say.
 - 18 Kas (tur 2): Dil sayfaları main'de Türkçe dışı tarayıcıda İngilizceye dönüyordu; yalnız kaynak okuyarak görülmedi, Playwright `locale: en-US` ile görüldü → kural: dil sayfalarını Türkçe dışı yerel ayarla da render et.
 
+- 18 Kas (tur 3): Tur 1 "e-posta taslağı" notunu 11 → 0 saymıştı ama alt bilgideki farklı cümle ("taslak oluşturmak") kaçmıştı → kural: kaldırılan iddiayı tek ifade ile değil anahtar kelime ailesiyle say (taslak, mailto, e-posta uygulaması).
+- 18 Kas (tur 3): WebP'ye geçişte video poster'ı JPG kalınca aynı görsel iki kez indi → kural: görsel değişiminde img, srcset, poster ve CSS background referanslarını birlikte say, Playwright aktarım baytıyla doğrula.
+
 ## Sonraki turun önceliği
 
-Dil sayfalarında kalan Türkçe (BEKLEYEN 1) ve büyük görseller (BEKLEYEN 2) — ikisi de iki turdur bekliyor, sonraki turda PR'a girmeli. Ardından hizmet sayfalarına mobil sabit CTA.
+Dil sayfalarında SSS ve süreç bölümlerinin çevirisi (BEKLEYEN 1), ardından hizmet sayfalarında yinelenen KAPSAM/SSS metinlerinin ayrıştırılması.
