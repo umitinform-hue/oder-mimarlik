@@ -10,7 +10,7 @@
 - **Ana müşteri sayfası:** https://odermimarlik.com/bireysel-ev-dekorasyonu/
 - **Telefon:** +90 534 547 22 39
 - **E-posta:** info@odergroup.com.tr
-- **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No: 2 İç Kapı No: 13, Ataşehir, İstanbul, Türkiye
+- **Adres:** Barbaros Mah. Lale Sk. Ağaoğlu My Office No:2 İç Kapı:13, 34746 Ataşehir / İstanbul, Türkiye
 - **Marka kategorisi:** İç mimarlık / Interior designer
 - **Profil sahibi:** Öder Group Business Profile yöneticisi; Öder Mimarlık için ayrı yönetici erişimi gerekiyorsa grup hesabından atanır
 

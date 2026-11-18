@@ -1,16 +1,16 @@
 # Öder Mimarlık — Otomasyon Durumu (SEO / AIO / CRO)
 
-Son doğrulama tarihi: 18 Kasım 2026
+Son doğrulama tarihi: 18 Kasım 2026 (tur 2, zamanlanmış)
 Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 
 ## Durum
 
-| Alan | 16 Kas | 18 Kas | Not |
-|---|---|---|---|
-| SEO teknik | İyi | İyi | lastmod, 404 ve ayrışık başlıklar eklendi |
-| SEO içerik-otorite | Zayıf | Zayıf | Hizmet sayfaları hâlâ ince; dış profil/yorum yok |
-| AIO | Orta | Orta+ | llms.txt ve sameAs eklendi; yorum ve GBP yok |
-| CRO | Orta | Orta+ | Hizmet sayfalarında telefon, iç link ve olay takibi |
+| Alan | 16 Kas | 18 Kas | 18 Kas (tur 2) | Not |
+|---|---|---|---|---|
+| SEO teknik | İyi | İyi | İyi | Dil sayfalarının İngilizceye dönmesi düzeltildi; lang sr-ME; NAP tek biçim |
+| SEO içerik-otorite | Zayıf | Zayıf | Orta− | Hizmet sayfaları 294–305 → 464–508 kelime; dış profil/yorum yok |
+| AIO | Orta | Orta+ | Orta+ | 11 FAQPage; adreste posta kodu; GBP/yorum yok |
+| CRO | Orta | Orta+ | Orta+ | Hizmet sayfalarında fayda satırı ve ikinci CTA; mobil sabit CTA yok |
 
 ## TAMAMLANDI
 
@@ -31,13 +31,21 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 | — | Dil sayfalarında KVKK onay kutusunun name alanı yoktu; Formspree'ye `kvkk_consent=not_accepted` gidiyordu | aynı | 1/12 → 12/12 sayfa |
 | — | Formspree hatasında olmayan "e-posta taslağı"na yönlendiren mesaj | aynı | düzeltildi + `form_error` olayı |
 
+| 9 | İnce hizmet sayfaları | 18 Kas tur 2, `otomasyon/seo-aio-cro-2026-11-18b` | 294–305 → 464–508 kelime; SSS 3 → 5; FAQPage 0 → 11; fayda satırı 0 → 11 |
+| — | "teşhir/depoma" yazım hatası | aynı | 11 → 0 |
+| — | Dil sayfalarında Türkçe dışı tarayıcıda (Googlebot dahil) hero İngilizceye dönüyor, `lang="en"` oluyordu (script.js otomatik dil geçişi) | aynı | 11 sayfa → 0 (Playwright, en-US) |
+| 2 (kısmi) | Dil sayfalarında Türkçe menü, hero CTA, 3 H2, 6 kart başlığı | aynı | 11 × 16 = 176 öğe çevrildi (locale-content.js değerleri) |
+| 5 | /me/ `lang="me"` | aynı | 13 → 0 (`sr-ME`) |
+| — | Adres iki farklı biçimde, posta kodu yok | aynı | görünür 12 + şema 25 + .md 2 tek biçime; postalCode 0 → 25 |
+
 ## BEKLEYEN (öncelik sırasıyla)
 
-1. **KRİTİK – İnce hizmet sayfaları** (11 sayfa, ~220–240 kelime, aynı üç H2): sayfaya özgü kapsam, süreç, teklif için gerekenler ve SSS (görünür SSS = FAQPage). Bekleme: 1 tur.
-2. **KRİTİK – Dil sayfalarında Türkçe kalan arayüz** (menü, konsept panosu, fiyat hesaplayıcı, form, 13 H2). Çeviri `locale-content.js` anahtarlarıyla yapılmalı. Bekleme: 1 tur.
-3. **UYARI – Büyük görseller**: 150 KB üstü 60 JPG/PNG (serkan-*.jpg 250–456 KB; logo kaynakları 1,7–1,9 MB). WebP + width/height. Bekleme: 1 tur.
-4. **UYARI – Ana sayfa formu**: alan sayısı/zorunlu alan gözden geçirilmeli. Bekleme: 1 tur.
-5. **UYARI – /me/ `lang="me"`** geçerli bir dil kodu değil; `locale-content.js` bu anahtarı kullandığı için ikisi birlikte `sr-ME`'ye taşınmalı. Bekleme: 1 tur.
+1. **KRİTİK – Dil sayfalarında kalan Türkçe**: eyebrow'lar, kart açıklamaları, görsel alt metinleri, 10 H2, form ve fiyat hesaplayıcı etiketleri (menü/CTA/3 H2/kart başlıkları 18 Kas'ta yapıldı). `locale-content.js`'te bu metinlerin çevirisi yok; yeni çeviri gerekir. Bekleme: 2 tur → sonraki turda zorunlu (ERTELEME YASAĞI).
+2. **UYARI – Büyük görseller**: 150 KB üstü JPG/PNG. WebP + width/height. Bekleme: 2 tur → sonraki turda zorunlu.
+3. **UYARI – Ana sayfa formu** alan sayısı gözden geçirme. Bekleme: 2 tur → sonraki turda zorunlu (en azından ölçüm ve öneri).
+4. **UYARI – Hizmet sayfalarında mobilde sabit telefon/WhatsApp CTA yok** (ana ve dil sayfalarında var). Bekleme: 0 tur.
+5. **UYARI – Hizmet sayfalarında ortak "KAPSAM" bölümü ve ilk 3 SSS 11 sayfada birebir aynı** (yinelenen metin). Bekleme: 0 tur.
+6. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
 
 ## KULLANICI KARARI BEKLEYEN
 
@@ -65,11 +73,15 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 
 ## Görünürlük gözlemi (ABD tabanlı arama aracı; sıralama değil)
 
-| Sorgu | 16 Kas | 18 Kas |
-|---|---|---|
-| Öder Mimarlık | çıkmadı | DOĞRULANAMADI |
-| odermimarlik.com | çıkmadı | DOĞRULANAMADI |
-| ölçüye özel mobilya Ataşehir | çıkmadı | DOĞRULANAMADI |
+| Sorgu | 16 Kas | 18 Kas | 18 Kas (tur 2) |
+|---|---|---|---|
+| Öder Mimarlık | çıkmadı | DOĞRULANAMADI | çıkmadı |
+| Oder Mimarlık Ataşehir | — | — | çıkmadı |
+| odermimarlik.com | çıkmadı | DOĞRULANAMADI | — |
+| ölçüye özel mobilya Ataşehir | çıkmadı | DOĞRULANAMADI | çıkmadı (armut.com ağırlıklı) |
+| mutfak dolabı tasarımı İstanbul | — | — | çıkmadı (pazar yerleri, armut.com) |
+| fuar standı tasarımı İstanbul | — | — | çıkmadı (expoassist.net, stand firmaları) |
+| iç mimarlık firması Ataşehir | — | — | çıkmadı (armut.com ağırlıklı) |
 
 ## Alınan dersler
 
@@ -77,6 +89,9 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 - 18 Kas: `lang` kodunu değiştirmek `locale-content.js` çevirisini bozacaktı → kural: `lang` değişikliğini çeviri anahtarıyla birlikte yap.
 - 18 Kas: ana sayfa KVKK kutusu doğruydu, dil sayfaları değil → kural: ana sayfayı kopya sayfalarla aynı varsayma, her dosyayı say.
 
+- 18 Kas (tur 2): `locale-content.js` hiçbir sayfada yüklenmiyordu; durum dosyası aksini varsayıyordu → kural: bir dosyanın etkisini varsaymadan önce hangi sayfaların yüklediğini say.
+- 18 Kas (tur 2): Dil sayfaları main'de Türkçe dışı tarayıcıda İngilizceye dönüyordu; yalnız kaynak okuyarak görülmedi, Playwright `locale: en-US` ile görüldü → kural: dil sayfalarını Türkçe dışı yerel ayarla da render et.
+
 ## Sonraki turun önceliği
 
-İnce hizmet sayfalarının içeriği (BEKLEYEN 1), ardından dil sayfası çevirileri (BEKLEYEN 2).
+Dil sayfalarında kalan Türkçe (BEKLEYEN 1) ve büyük görseller (BEKLEYEN 2) — ikisi de iki turdur bekliyor, sonraki turda PR'a girmeli. Ardından hizmet sayfalarına mobil sabit CTA.

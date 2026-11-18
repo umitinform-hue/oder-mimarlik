@@ -28,3 +28,9 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - 11 hizmet sayfasına telefon CTA'sı, ilgili hizmetler bloğu, çalışma saatli alt bilgi ve olay takibi (`phone_click`, `whatsapp_click`, `email_click`, `cta_click`; `page_type=service`) eklendi.
 - İşletme şemasına Instagram `sameAs` ve yazım varyantları eklendi.
 - Dil sayfalarında KVKK onayı forma iletilmiyordu; düzeltildi. Ayrıntı: `OTOMASYON-DURUM.md`.
+
+## 18 Kasım 2026 — Otomasyon turu 2 (zamanlanmış)
+
+- 11 hizmet sayfasına sayfaya özgü "Hizmet ayrıntısı", "Teklif için" bölümleri, fayda satırı, +2 SSS ve FAQPage şeması eklendi (294–305 → 464–508 kelime).
+- Dil sayfalarında Türkçe dışı tarayıcıda içerik İngilizceye dönüyordu; `script.js` otomatik dil geçişi yalnız `lang="tr"` sayfada çalışacak şekilde sınırlandı.
+- Dil sayfalarında menü, hero CTA, 3 H2 ve 6 kart başlığı çevrildi; /me/ `lang` → `sr-ME`; adres tek biçime getirildi (posta kodu 34746). Ayrıntı: `OTOMASYON-DURUM.md`.
