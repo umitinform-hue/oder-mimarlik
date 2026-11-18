@@ -27,7 +27,7 @@ function track(name, detail={}){const eventName=`oder_${name}`;window.dataLayer.
 document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"],a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>track(a.href.includes('wa.me')?'whatsapp_click':a.href.startsWith('tel:')?'phone_click':'email_click',{href:a.href})));
 document.querySelectorAll('.service-card,.hero-actions a,.estimate-action').forEach(a=>a.addEventListener('click',()=>track('cta_click',{text:a.textContent.trim()})));document.querySelectorAll('.hero-actions .button').forEach(a=>a.addEventListener('click',()=>track('hero_cta_click',{text:a.textContent.trim()})));document.querySelectorAll('#portfolio-gallery a').forEach(a=>a.addEventListener('click',()=>track('project_gallery_open',{href:a.href})));
 
-try{const saved=localStorage.getItem('oder-language');if(saved&&languageNames[saved])setLanguage(saved);else if(!navigator.language.toLowerCase().startsWith('tr'))setLanguage('en')}catch{}
+if(document.documentElement.lang==='tr'){try{const saved=localStorage.getItem('oder-language');if(saved&&languageNames[saved])setLanguage(saved);else if(!navigator.language.toLowerCase().startsWith('tr'))setLanguage('en')}catch{}}
 if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData){document.querySelectorAll('video[autoplay]').forEach(video=>{video.pause();video.autoplay=false;video.removeAttribute('autoplay')})}
 
 const menuToggle=document.querySelector('.menu-toggle');
