@@ -21,7 +21,7 @@ Bing Webmaster Tools giriş ekranı açıldı; ancak aktif Microsoft/Bing oturum
 
 Öder Mimarlık için ayrı GA4 web akışı oluşturuldu ve ölçüm kimliği `G-XG6PLBHVFW` olarak doğrulandı. Ayrı GTM containerı `GTM-WMPNP7JJ` oluşturuldu; Google Analytics etiketi `Initialization - All Pages` tetikleyicisi ile yapılandırılıp yayınlandı. Site ana sayfa, Balkan dil sayfaları ve hizmet landing sayfalarında GTM head + noscript kodlarını taşır.
 
-Öder Mimarlık sitesindeki dönüşüm altyapısı hazırdır. `dataLayer` olayları ve varsa `gtag` çağrıları şu olayları üretir: `oder_form_start`, `oder_form_submit`, `oder_generate_lead`, `oder_hero_cta_click`, `oder_whatsapp_click`, `oder_phone_click`, `oder_email_click`, `oder_calculator_complete`, `oder_calculator_add_to_project`, `oder_language_select`, `oder_country_select` ve `oder_project_gallery_open`.
+Öder Mimarlık sitesindeki dönüşüm altyapısı hazırdır. `dataLayer` olayları ve varsa `gtag` çağrıları şu olayları üretir: `oder_form_start`, `oder_generate_lead` (başarılı gönderim), `oder_form_error`, `oder_cta_click`, `oder_hero_cta_click`, `oder_whatsapp_click`, `oder_phone_click`, `oder_email_click`, `oder_calculator_complete`, `oder_calculator_add_to_project`, `oder_language_select`, `oder_country_select` ve `oder_project_gallery_open`.
 
 Gerçek GA4/GTM ölçümünün aktif olması için Öder Mimarlık’e ait GA4 Measurement ID (`G-...`) veya GTM Container ID (`GTM-...`) gerekir. Bu kimlik olmadan script eklemek ölçüm üretmez ve yanlış markanın verisini kirletir.
 

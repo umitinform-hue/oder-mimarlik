@@ -115,7 +115,7 @@ contactForm.addEventListener('submit',async event=>{
       track('generate_lead',{lead_method:'formspree',service:'genel_proje_talebi',city:payload.location});
       feedback.textContent='Talebiniz ulaştı. En kısa sürede sizinle iletişime geçeceğiz.'; form.reset();
     }catch(error){
-      feedback.textContent='Gönderim şu anda tamamlanamadı. WhatsApp’tan yazabilir veya e-posta taslağını kullanabilirsiniz.';
+      track('form_error',{lead_method:'formspree'});feedback.textContent='Gönderim şu anda tamamlanamadı. WhatsApp’tan yazabilir veya info@odergroup.com.tr adresine e-posta gönderebilirsiniz.';
     }finally{submitButton.disabled=false}
     return;
   }
