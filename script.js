@@ -1,3 +1,4 @@
+const tx=(s,t)=>{let r=s;try{const l=document.documentElement.lang==='sr-ME'?'me':document.documentElement.lang;const d=(window.ODER_I18N||{})[l];if(d&&d[s])r=d[s]}catch{}return t===undefined?r:r.replace('{t}',t)};
 const CONTACT_EMAIL = "info@odergroup.com.tr";
 // Öder Mimarlık Proje Talebi — Formspree endpoint.
 const FORM_ENDPOINT = "https://formspree.io/f/xqpqkdpr";
@@ -31,7 +32,7 @@ if(document.documentElement.lang==='tr'){try{const saved=localStorage.getItem('o
 if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData){document.querySelectorAll('video[autoplay]').forEach(video=>{video.pause();video.autoplay=false;video.removeAttribute('autoplay')})}
 
 const menuToggle=document.querySelector('.menu-toggle');
-menuToggle.addEventListener('click',()=>{const nav=document.querySelector('.nav');const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Menüyü kapat':'Menüyü aç')});
+menuToggle.addEventListener('click',()=>{const nav=document.querySelector('.nav');const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?tx('Menüyü kapat'):tx('Menüyü aç'))});
 document.querySelectorAll('.nav a').forEach(link=>link.addEventListener('click',()=>{document.querySelector('.nav').classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}));
 
 // Build a lazy-loaded gallery from the user's supplied, deduplicated field-photo set.
@@ -52,8 +53,8 @@ document.querySelector('#download-concept')?.addEventListener('click',()=>{if(!r
 function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight){let line='';for(const word of text.split(' ')){const test=line?`${line} ${word}`:word;if(ctx.measureText(test).width>maxWidth&&line){ctx.fillText(line,x,y);line=word;y+=lineHeight}else line=test}if(line)ctx.fillText(line,x,y)}
 
 const conceptGallery=document.querySelector('#concept-gallery');
-if(conceptGallery){const concepts=[['mustafa-01-clean.jpg','Mutfak mobilyası','Dolap modülleri, açık raf ve tezgâh ilişkisi üzerine 3D tasarım çalışması.'],['mustafa-02-clean.jpg','Çağdaş mutfak düzeni','Depolama ve çalışma yüzeylerini birlikte ele alan mutfak konsepti.'],['mustafa-03-clean.jpg','Açık tonlu mutfak','Aydınlık yüzeyler ve sade kapak çizgileriyle tasarım fikri.'],['mustafa-05-clean.jpg','Mermer etkili TV duvarı','Salon mobilyası, dekoratif yüzey ve sergileme nişleri için 3D fikir.'],['mustafa-06-clean.jpg','Özel sergileme nişleri','Aydınlatmalı raf ve vitrin detayları üzerine mobilya konsepti.'],['mustafa-07-clean.jpg','Salon ve oturma alanı','TV duvarı ve oturma grubu çevresindeki yerleşim fikri.']];for(const [file,title,copy] of concepts){const card=document.createElement('figure'),link=document.createElement('a'),img=document.createElement('img'),caption=document.createElement('figcaption');link.href=assetUrl(`assets/design-inspiration/mustafa/${file}`);link.target='_blank';link.rel='noopener';link.setAttribute('aria-label',`${title}, orijinal görseli yeni sekmede aç`);img.src=assetUrl(`assets/design-inspiration/mustafa/${file}`);img.alt=`3D tasarım konsepti: ${title}`;img.loading='lazy';caption.innerHTML=`<b>${title}</b><span>${copy}</span>`;link.append(img);card.append(link,caption);conceptGallery.append(card)}}
-const videoGallery=document.querySelector('#video-gallery');if(videoGallery&&Array.isArray(window.ODER_VIDEOS))for(const video of window.ODER_VIDEOS){const card=document.createElement('article'),player=document.createElement('video'),source=document.createElement('source'),title=document.createElement('h3'),desc=document.createElement('p');card.className='video-card';player.controls=true;player.playsInline=true;player.preload='metadata';player.muted=true;player.defaultMuted=true;player.setAttribute('muted','');player.setAttribute('aria-label',video.title);source.src=assetUrl(`assets/videos/${video.file}`);source.type='video/mp4';player.append(source);title.textContent=video.title;desc.textContent=video.description;card.append(player,title,desc);videoGallery.append(card)}
+if(conceptGallery){const concepts=[['mustafa-01-clean.jpg','Mutfak mobilyası','Dolap modülleri, açık raf ve tezgâh ilişkisi üzerine 3D tasarım çalışması.'],['mustafa-02-clean.jpg','Çağdaş mutfak düzeni','Depolama ve çalışma yüzeylerini birlikte ele alan mutfak konsepti.'],['mustafa-03-clean.jpg','Açık tonlu mutfak','Aydınlık yüzeyler ve sade kapak çizgileriyle tasarım fikri.'],['mustafa-05-clean.jpg','Mermer etkili TV duvarı','Salon mobilyası, dekoratif yüzey ve sergileme nişleri için 3D fikir.'],['mustafa-06-clean.jpg','Özel sergileme nişleri','Aydınlatmalı raf ve vitrin detayları üzerine mobilya konsepti.'],['mustafa-07-clean.jpg','Salon ve oturma alanı','TV duvarı ve oturma grubu çevresindeki yerleşim fikri.']];for(const [file,t0,c0] of concepts){const title=tx(t0),copy=tx(c0);const card=document.createElement('figure'),link=document.createElement('a'),img=document.createElement('img'),caption=document.createElement('figcaption');link.href=assetUrl(`assets/design-inspiration/mustafa/${file}`);link.target='_blank';link.rel='noopener';link.setAttribute('aria-label',tx('{t}, orijinal görseli yeni sekmede aç',title));img.src=assetUrl(`assets/design-inspiration/mustafa/${file}`);img.alt=tx('3D tasarım konsepti: {t}',title);img.loading='lazy';caption.innerHTML=`<b>${title}</b><span>${copy}</span>`;link.append(img);card.append(link,caption);conceptGallery.append(card)}}
+const videoGallery=document.querySelector('#video-gallery');if(videoGallery&&Array.isArray(window.ODER_VIDEOS))for(const video of window.ODER_VIDEOS){const card=document.createElement('article'),player=document.createElement('video'),source=document.createElement('source'),title=document.createElement('h3'),desc=document.createElement('p');card.className='video-card';player.controls=true;player.playsInline=true;player.preload='metadata';player.muted=true;player.defaultMuted=true;player.setAttribute('muted','');player.setAttribute('aria-label',tx(video.title));source.src=assetUrl(`assets/videos/${video.file}`);source.type='video/mp4';player.append(source);title.textContent=tx(video.title);desc.textContent=tx(video.description);card.append(player,title,desc);videoGallery.append(card)}
 
 document.querySelectorAll('[data-b2b-cta]').forEach(link=>link.addEventListener('click',()=>{const message=document.querySelector('[name="message"]');if(message)message.value='Kurumsal mobilya tasarımı / perakende teklif görüşmesi talebi. Marka veya kategori: ____. Ürün / mağaza kapsamı: ____. Tahmini adet ve teslimat bölgesi: ____.'}));
 
@@ -81,7 +82,7 @@ function updateEstimate(){
   const estimate=window.calculateProjectEstimate(area.value,projectType,selectedSegment(),country.value);
   const price=document.querySelector('#estimate-price'),time=document.querySelector('#estimate-time');
   price.textContent=`${formatEuro(estimate.minimum)} - ${formatEuro(estimate.maximum)}`;
-  time.textContent=estimate.consultancyBonus?'100 m² üzeri ekstrem proje için %10 mimarlık danışmanlık payı dahil.':'Yaklaşık hesap · Kesin kapsam ve teslimat süresi keşif sonrası netleştirilir.';
+  time.textContent=estimate.consultancyBonus?tx('100 m² üzeri ekstrem proje için %10 mimarlık danışmanlık payı dahil.'):tx('Yaklaşık hesap · Kesin kapsam ve teslimat süresi keşif sonrası netleştirilir.');
 }
 area.addEventListener('input',updateEstimate);country.addEventListener('change',()=>{track('country_select',{country:country.value});updateEstimate()});
 document.querySelectorAll('input[name="segment"]').forEach(input=>input.addEventListener('change',updateEstimate));
@@ -108,14 +109,14 @@ contactForm.addEventListener('submit',async event=>{
   const body=encodeURIComponent(`Ad: ${payload.name}\nE-posta: ${payload.email}\nTelefon: ${payload.phone||'Belirtilmedi'}\nKonum: ${payload.location}\n\nProje: ${payload.message}`);
   if(FORM_ENDPOINT){
     const submitButton=form.querySelector('button[type="submit"]');
-    submitButton.disabled=true; feedback.textContent='Talebiniz gönderiliyor…';
+    submitButton.disabled=true; feedback.textContent=tx('Talebiniz gönderiliyor…');
     try{
       const response=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)});
       if(!response.ok) throw new Error('form_endpoint_failed');
       track('generate_lead',{lead_method:'formspree',service:'genel_proje_talebi',city:payload.location});
-      feedback.textContent='Talebiniz ulaştı. En kısa sürede sizinle iletişime geçeceğiz.'; form.reset();
+      feedback.textContent=tx('Talebiniz ulaştı. En kısa sürede sizinle iletişime geçeceğiz.'); form.reset();
     }catch(error){
-      track('form_error',{lead_method:'formspree'});feedback.textContent='Gönderim şu anda tamamlanamadı. WhatsApp’tan yazabilir veya info@odergroup.com.tr adresine e-posta gönderebilirsiniz.';
+      track('form_error',{lead_method:'formspree'});feedback.textContent=tx('Gönderim şu anda tamamlanamadı. WhatsApp’tan yazabilir veya info@odergroup.com.tr adresine e-posta gönderebilirsiniz.');
     }finally{submitButton.disabled=false}
     return;
   }
