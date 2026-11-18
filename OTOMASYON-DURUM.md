@@ -1,6 +1,6 @@
 # Öder Mimarlık — Otomasyon Durumu (SEO / AIO / CRO)
 
-Son doğrulama tarihi: 18 Kasım 2026 (tur 3, elle başlatılan sınama turu)
+Son doğrulama tarihi: 18 Kasım 2026 (tur 4, proje sohbetinden elle)
 Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 
 ## Durum
@@ -13,6 +13,8 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 | CRO | Orta | Orta+ | Orta+ | Hizmet sayfalarında fayda satırı ve ikinci CTA; mobil sabit CTA yok |
 
 Tur 3 (18 Kas 19:22): SEO teknik İyi; içerik Orta−; AIO Orta+; CRO İyi− (hizmet sayfalarında sabit CTA, dil sayfası formu kendi dilinde).
+
+Tur 4 (18 Kas 23:30): SEO teknik İyi; içerik Orta (hizmet sayfaları ayrıştı, 11 dil sayfası çevrildi); AIO İyi− (tüm FAQPage = görünür SSS); CRO İyi−. Açık KRİTİK: 0.
 
 ## TAMAMLANDI
 
@@ -46,18 +48,28 @@ Tur 3 (18 Kas 19:22): SEO teknik İyi; içerik Orta−; AIO Orta+; CRO İyi− (
 | 2 (kısmi) | Dil sayfalarında form, iletişim metni, 10 H2, sabit çubuk | aynı | 11 × 26 = 286 öğe; Türkçe görünür parça (bg) 228 → 201 |
 | 4 | Hizmet sayfalarında mobil sabit CTA yok | aynı | 0 → 11 |
 
+| — | Hizmet sayfalarında ortak KAPSAM bölümü ve ilk 3 SSS | 18 Kas tur 4, `otomasyon/seo-aio-cro-2026-11-18d` | KAPSAM 1 ortak → 11 benzersiz; ilk 3 SSS 11 aynı → 33 benzersiz soru; FAQPage görünürden yeniden üretildi |
+| — | "Ölçüye özel mobilya" ↔ "mobilya ve dekorasyon" anahtar kelime çakışması | aynı | /hizmetler/mobilya-dekorasyon/ title/H1/description/keywords/şema "Mobilya ve Dekorasyon Tasarımı"; eski ad 9 geçiş → 0 |
+| 1 | Dil sayfalarında kalan Türkçe (statik) | aynı | sayfa başına 259–260 parça → 0 (11 dil); ülke adları ICU; korunanlar: logo, dil adları, adres, marka, B2B cümlesi |
+| — | Dil sayfalarında betiğin ürettiği Türkçe (ilham kartları, videolar, hesaplayıcı notu, form mesajları, menü) | aynı | açılışta görünen Türkçe satır 27 → 0 (Playwright bg/el/me/en); yeni `i18n/<dil>.js` |
+| — | Dil sayfalarında FAQPage Türkçe 3 soru, görünürde 6 | aynı | 11 sayfa → görünür 6 SSS ile birebir, inLanguage sayfa dili |
+| — | Ana sayfa FAQPage 3 soru, görünürde 6 farklı | aynı | görünür 6 SSS ile birebir |
+| — | **Türkçe ana sayfa Türkçe olmayan tarayıcıda (Googlebot dahil) İngilizceye dönüyordu** | aynı | en-US/de-DE'de lang=en → lang=tr (Playwright); menüden seçim çalışıyor |
+| — | Video `uploadDate` saat dilimi (Search Console 26 Eki uyarısı) | doğrulandı, değişiklik gerekmedi | 18 blok `+03:00` ile |
+
 ## BEKLEYEN (öncelik sırasıyla)
 
-1. **KRİTİK – Dil sayfalarında kalan Türkçe** (sayfa başına ~200 parça / ~1130 kelime: tasarım laboratuvarı, hizmet kartı açıklamaları, fiyat hesaplayıcı, süreç, SSS, alt metinler, aria-label'lar, script.js form mesajları). Tur 1–3'te menü, CTA, 13 H2, form ve kartlar yapıldı. Engel: 11 dil × ~1100 kelime bir turda güvenli çevrilemiyor; her tur bir blok (sırada: SSS + süreç, sonra hesaplayıcı). Bekleme: 3 tur (kısmi ilerleme her turda).
-2. **UYARI – Ana sayfa formu**: e-posta zorunlu, telefon isteğe bağlı; kalite kapısı "ad, telefon, şehir, mekân türü, ihtiyaç, not" diyor. Zorunlu alan değişikliği dönüşümü etkileyeceği için KULLANICI KARARI'na taşındı. Bekleme: 3 tur.
-3. **UYARI – Hizmet sayfalarında ortak "KAPSAM" bölümü ve ilk 3 SSS 11 sayfada birebir aynı**. Bekleme: 1 tur.
-4. **UYARI – Büyük kaynak logolar** (assets/logo/*-source.png, 1,7–1,9 MB) hiçbir sayfada kullanılmıyor; silme yasak, dokunulmadı. og:image ve şema görselleri bilinçli olarak JPG bırakıldı.
-5. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
+1. **UYARI – Saha fotoğraf galerisi ve konsept panosu (betikle üretilen, tıklayınca görünen)**: script.js'teki ~60 fotoğraf açıklaması ve konsept panosu ara mesajları dil sayfalarında Türkçe. Çözüm hazır altyapıyla: metni `tx()` ile sarmala, `i18n/<dil>.js` dosyalarına ekle. Bekleme: 1 tur.
+2. **UYARI – Ana sayfa formu**: e-posta zorunlu, telefon isteğe bağlı → KULLANICI KARARI.
+3. **UYARI – Büyük kaynak logolar** (assets/logo/*-source.png, 1,7–1,9 MB) hiçbir sayfada kullanılmıyor; silme yasak, dokunulmadı.
+4. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
+5. **BİLGİ – Hizmet sayfası KAPSAM video açıklamaları** (ör. çocuk odası sayfasında "Ahşap sergileme nişleri ve raflar") sayfa konusuyla uyuşmuyor; video dosyası doğrulanmadan değiştirilmedi.
 
 ## KULLANICI KARARI BEKLEYEN
 
 - **Görünür metinde üçüncü taraf marka adları**: ana ve dil sayfalarındaki B2B bölümünde "Bauhaus, IKEA ve benzeri markaların satın alma… ekipleri" cümlesi (12 sayfa). Kural gereği otomasyon silmedi ve çevirmedi; kaldırılması/yeniden yazılması için onay bekleniyor.
 - Ana sayfa formunda e-posta yerine telefonun zorunlu olması (kalite kapısı önerisi) — karar bekleniyor.
+- Video ve hizmet sayfası metinlerindeki müşteri adı "Shade Home Fashion" (mevcut içerik; otomasyon eklemedi, silmedi) — yayında kalması için açık onay bekleniyor.
 
 - Öder Mimarlık'a ait Google İşletme Profili bağlantısı (varsa) — bilgi bekleniyor.
 - Diğer sosyal profiller (Instagram dışında) — bilgi bekleniyor.
@@ -105,6 +117,10 @@ Tur 3 (18 Kas 19:22): SEO teknik İyi; içerik Orta−; AIO Orta+; CRO İyi− (
 - 18 Kas (tur 3): Tur 1 "e-posta taslağı" notunu 11 → 0 saymıştı ama alt bilgideki farklı cümle ("taslak oluşturmak") kaçmıştı → kural: kaldırılan iddiayı tek ifade ile değil anahtar kelime ailesiyle say (taslak, mailto, e-posta uygulaması).
 - 18 Kas (tur 3): WebP'ye geçişte video poster'ı JPG kalınca aynı görsel iki kez indi → kural: görsel değişiminde img, srcset, poster ve CSS background referanslarını birlikte say, Playwright aktarım baytıyla doğrula.
 
+- 18 Kas (tur 4): Ana sayfayla metin karşılaştırması iki CTA'yı kaçırdı (ana sayfada farklı yazılmıştı) → kural: çevrilmemiş metni "11 dil sayfasında birebir aynı kalan metin" ölçütüyle de say.
+- 18 Kas (tur 4): Kaynakta 0 Türkçe görünürken betik çalışınca 27 Türkçe satır çıktı → kural: dil sayfalarını Playwright'ta render edip `innerText` ile say.
+- 18 Kas (tur 4): Tur 2 dil sayfalarında düzelttiği otomatik İngilizce geçişin aynısı ana sayfada da vardı → kural: bir hata bir sayfa grubunda bulunduysa aynı kodu yükleyen tüm sayfalarda ara.
+
 ## Sonraki turun önceliği
 
-Dil sayfalarında SSS ve süreç bölümlerinin çevirisi (BEKLEYEN 1), ardından hizmet sayfalarında yinelenen KAPSAM/SSS metinlerinin ayrıştırılması.
+Saha fotoğraf galerisi ve konsept panosu metinlerinin çevirisi (BEKLEYEN 1); ardından regresyon sayımı ve görünürlük gözlemi.
