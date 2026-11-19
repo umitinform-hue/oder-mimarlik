@@ -1,6 +1,6 @@
 # Öder Mimarlık — Otomasyon Durumu (SEO / AIO / CRO)
 
-Son doğrulama tarihi: 18 Kasım 2026 (tur 4, proje sohbetinden elle)
+Son doğrulama tarihi: 19 Kasım 2026 (tur 5, zamanlanmış görev)
 Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 
 ## Durum
@@ -15,6 +15,8 @@ Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 Tur 3 (18 Kas 19:22): SEO teknik İyi; içerik Orta−; AIO Orta+; CRO İyi− (hizmet sayfalarında sabit CTA, dil sayfası formu kendi dilinde).
 
 Tur 4 (18 Kas 23:30): SEO teknik İyi; içerik Orta (hizmet sayfaları ayrıştı, 11 dil sayfası çevrildi); AIO İyi− (tüm FAQPage = görünür SSS); CRO İyi−. Açık KRİTİK: 0.
+
+Tur 5 (19 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İyi− (bireysel ev sayfası FAQPage eşlendi); CRO İyi−. Açık KRİTİK: 0. Regresyon: 0. PR #5 (kullanıcı kararları; script.js, i18n, 12 ana/dil sayfası, iş akışı) açık; bu tur o dosyalara dokunmadı.
 
 ## TAMAMLANDI
 
@@ -56,6 +58,8 @@ Tur 4 (18 Kas 23:30): SEO teknik İyi; içerik Orta (hizmet sayfaları ayrışt�
 | — | Ana sayfa FAQPage 3 soru, görünürde 6 farklı | aynı | görünür 6 SSS ile birebir |
 | — | **Türkçe ana sayfa Türkçe olmayan tarayıcıda (Googlebot dahil) İngilizceye dönüyordu** | aynı | en-US/de-DE'de lang=en → lang=tr (Playwright); menüden seçim çalışıyor |
 | — | Video `uploadDate` saat dilimi (Search Console 26 Eki uyarısı) | doğrulandı, değişiklik gerekmedi | 18 blok `+03:00` ile |
+| — | /bireysel-ev-dekorasyonu/ FAQPage görünür SSS ile uyuşmuyordu; ince içerik; hizmet sayfalarına iç link yok; adres kısaltılmış | 19 Kas tur 5, `otomasyon/seo-aio-cro-2026-11-19` | FAQPage = görünür 2/4 → 5/5; kelime (BS4, main) 373 → 468; hizmet iç linki 0 → 6; fayda satırı 0 → 1; tam adres 0 → 1 |
+| — | BEKLEYEN 5 (hizmet sayfası video etiketleri) | 19 Kas tur 5, kare çıkarımıyla kontrol | 3 videodan 6 kare: ışıklı ahşap raf/niş/gardırop; etiketler videos.js kataloğuyla uyumlu; videonun sayfa konusuyla ilgisi içerik kararı, değişiklik yapılmadı |
 
 ## BEKLEYEN (öncelik sırasıyla)
 
@@ -95,15 +99,15 @@ Tur 4 (18 Kas 23:30): SEO teknik İyi; içerik Orta (hizmet sayfaları ayrışt�
 
 ## Görünürlük gözlemi (ABD tabanlı arama aracı; sıralama değil)
 
-| Sorgu | 16 Kas | 18 Kas | 18 Kas (tur 2) |
-|---|---|---|---|
-| Öder Mimarlık | çıkmadı | DOĞRULANAMADI | çıkmadı |
-| Oder Mimarlık Ataşehir | — | — | çıkmadı |
-| odermimarlik.com | çıkmadı | DOĞRULANAMADI | — |
-| ölçüye özel mobilya Ataşehir | çıkmadı | DOĞRULANAMADI | çıkmadı (armut.com ağırlıklı) |
-| mutfak dolabı tasarımı İstanbul | — | — | çıkmadı (pazar yerleri, armut.com) |
-| fuar standı tasarımı İstanbul | — | — | çıkmadı (expoassist.net, stand firmaları) |
-| iç mimarlık firması Ataşehir | — | — | çıkmadı (armut.com ağırlıklı) |
+| Sorgu | 16 Kas | 18 Kas | 18 Kas (tur 2) | 19 Kas |
+|---|---|---|---|---|
+| Öder Mimarlık | çıkmadı | DOĞRULANAMADI | çıkmadı | çıkmadı |
+| Oder Mimarlık Ataşehir | — | — | çıkmadı | çıkmadı |
+| odermimarlik.com | çıkmadı | DOĞRULANAMADI | — | — |
+| ölçüye özel mobilya Ataşehir | çıkmadı | DOĞRULANAMADI | çıkmadı (armut.com ağırlıklı) | çıkmadı (armut.com) |
+| mutfak dolabı tasarımı İstanbul | — | — | çıkmadı (pazar yerleri, armut.com) | çıkmadı (pazar yerleri, armut.com) |
+| fuar standı tasarımı İstanbul | — | — | çıkmadı (expoassist.net, stand firmaları) | çıkmadı (expoassist.net) |
+| iç mimarlık firması Ataşehir | — | — | çıkmadı (armut.com ağırlıklı) | çıkmadı (armut.com) |
 
 ## Alınan dersler
 
@@ -120,7 +124,12 @@ Tur 4 (18 Kas 23:30): SEO teknik İyi; içerik Orta (hizmet sayfaları ayrışt�
 - 18 Kas (tur 4): Ana sayfayla metin karşılaştırması iki CTA'yı kaçırdı (ana sayfada farklı yazılmıştı) → kural: çevrilmemiş metni "11 dil sayfasında birebir aynı kalan metin" ölçütüyle de say.
 - 18 Kas (tur 4): Kaynakta 0 Türkçe görünürken betik çalışınca 27 Türkçe satır çıktı → kural: dil sayfalarını Playwright'ta render edip `innerText` ile say.
 - 18 Kas (tur 4): Tur 2 dil sayfalarında düzelttiği otomatik İngilizce geçişin aynısı ana sayfada da vardı → kural: bir hata bir sayfa grubunda bulunduysa aynı kodu yükleyen tüm sayfalarda ara.
+- 19 Kas (tur 5): FAQPage eşleşmesi yalnız hizmet/ana/dil sayfalarında yapılmıştı; /bireysel-ev-dekorasyonu/ kaçmıştı → kural: şema-görünür eşleşmesini sitemap'teki her URL için say.
+- 19 Kas (tur 5): Açık PR #5 script.js, i18n ve 12 ana/dil sayfasını değiştiriyordu; aynı dosyalara dokunmak çakışma yaratacaktı → kural: açık PR'ın dosyalarını tur başında çıkar, durum dosyasında o PR'ın satırlarına bitişik satır değiştirme.
 
 ## Sonraki turun önceliği
 
-Saha fotoğraf galerisi ve konsept panosu metinlerinin çevirisi (BEKLEYEN 1); ardından regresyon sayımı ve görünürlük gözlemi.
+1. PR #5 birleştiyse: saha fotoğraf galerisi ve konsept panosu metinlerinin çevirisi (BEKLEYEN 1; 2 tur ertelendi — engel: PR #5 aynı script.js ve i18n dosyalarını değiştiriyor). 3. turda ERTELEME YASAĞI gereği PR'a girecek.
+2. Ana ve dil sayfalarında ikinci FAQPage bloğu (`data-source="localized-faq"`, görünür 3 soru) — sayfa başına tek FAQPage'de birleştirme (UYARI; PR #5 dosyaları).
+3. /bs/ ve /me/ aynı meta description (UYARI; PR #5 dosyaları).
+4. Regresyon sayımı ve görünürlük gözlemi.
