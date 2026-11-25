@@ -55,3 +55,41 @@ footer{background:#fbfaf7;color:#292a26;border-top:1px solid #e5e1d8}.footer-mai
 .seo-service-links{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;padding:54px 6vw;border-top:1px solid var(--line);background:#ebe8df}.seo-service-links small{font-size:10px;letter-spacing:.14em;color:#b35735;font-weight:700}.seo-service-links h2{font-size:clamp(26px,3vw,44px);letter-spacing:-.05em;margin:12px 0}.seo-service-links nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}.seo-service-links nav a{display:flex;justify-content:space-between;gap:12px;padding:16px;background:#fff;border:1px solid var(--line);color:inherit;text-decoration:none;font-size:12px;font-weight:700}.seo-service-links nav a span{color:#b35735}@media(max-width:680px){.seo-service-links{grid-template-columns:1fr;padding:40px 18px}.seo-service-links nav{grid-template-columns:1fr}}
 
 .localized-seo-content{margin:0 6vw;padding:42px 0 24px;border-bottom:1px solid var(--line);max-width:1100px}.localized-seo-content h2{max-width:850px;margin:14px 0 10px;font-size:clamp(28px,4vw,56px);line-height:1.02;letter-spacing:-.055em}.localized-seo-content>p{max-width:720px;color:var(--muted);line-height:1.7}.localized-faq{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.localized-faq article{padding:18px;background:#fff;border:1px solid var(--line)}.localized-faq h3{font-size:14px;line-height:1.25;margin:0 0 10px}.localized-faq p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}@media(max-width:760px){.localized-seo-content{margin:0 18px;padding-top:30px}.localized-faq{grid-template-columns:1fr}}
+/* 2026-11-26 görsel düzeltmeler: kurumsal logo yazısı, tüm hizmetler ızgarası, menü boşluğu, galeri çağrısı */
+.header .brand{gap:14px}
+.header .brand-emblem,.brand-footer .brand-emblem{width:54px;height:54px}
+.brand-copy{padding-left:14px;border-left:1px solid #b89b59;gap:7px}
+.brand-copy b{font:600 29px/1 Manrope,var(--display);letter-spacing:.36em;margin-right:-.36em;color:#1f241e}
+.brand-copy small{font:600 8.5px/1 var(--sans);letter-spacing:.27em;color:#8c7a45;white-space:nowrap}
+.brand-copy small br{display:none}
+.brand-footer .brand-copy b{color:inherit}
+@media(max-width:950px){.header .brand-emblem{width:46px;height:46px}.brand-copy{padding-left:11px}.brand-copy b{font-size:22px;letter-spacing:.3em;margin-right:-.3em}.brand-copy small{font-size:7.5px;letter-spacing:.2em}}
+@media(max-width:680px){.header .brand{gap:9px}.header .brand-emblem{width:40px;height:40px}.brand-copy{padding-left:9px;gap:5px}.brand-copy b{font-size:19px;letter-spacing:.26em;margin-right:-.26em}.brand-copy small{font-size:6.5px;letter-spacing:.14em}}
+.service-grid-all{grid-template-columns:repeat(4,1fr);gap:14px}
+.service-grid-all .service-card{height:auto;aspect-ratio:4/5;border-radius:2px}
+.service-grid-all .service-card>img{filter:saturate(.92) contrast(1.03)}
+.service-grid-all .service-card:after{inset:38% 0 0;background:linear-gradient(transparent,#0d0f0cd9)}
+.service-grid-all .service-card:hover>img{transform:scale(1.06)}
+.service-grid-all .service-info h3{font-size:22px;letter-spacing:-.03em}
+.service-grid-all .service-info p{font-size:11.5px}
+.service-grid-all .service-info small{font-size:8.5px;letter-spacing:.18em}
+.service-grid-all .card-cta{background:#202820;color:#f8f5eb;display:flex}
+.service-grid-all .card-cta .abstract{color:#e2c779}
+.service-grid-all .card-cta .service-info p{color:#f8f5ebd0}
+.service-grid-all .card-cta .card-icon{border-color:#e2c77999}
+.card-cta-btn{display:inline-block;margin-top:16px;padding:12px 18px;background:#c77a60;color:#fff;font-weight:700;font-size:12px;letter-spacing:.02em}
+@media(max-width:1100px){.service-grid-all{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:950px){.service-grid-all{grid-template-columns:repeat(2,1fr)}.service-grid-all .service-card{height:auto}}
+@media(max-width:680px){.service-grid-all{gap:10px}.service-grid-all .service-info h3{font-size:16px}.service-grid-all .service-info p{font-size:10px}}
+section[id].section-pad,section#hizmetler,section#projeler{scroll-margin-top:-74px}
+#mobilya{scroll-margin-top:24px}
+@media(max-width:680px){section[id].section-pad,section#hizmetler,section#projeler{scroll-margin-top:-48px}}
+.portfolio-more{margin-top:34px;border:0}
+.portfolio-more summary{position:relative;min-height:150px;padding:34px 40px;align-items:center;font:600 clamp(20px,2.3vw,30px)/1.15 var(--display);letter-spacing:-.02em;color:#f8f5eb;background:linear-gradient(90deg,#1c221c 0,#1c221cf2 34%,#1c221c8c 62%,#1c221c26 100%),url(assets/portfolio/serkan-044.webp) center 42%/cover no-repeat,#1c221c;box-shadow:0 14px 34px #11130f2e;transition:transform .25s,box-shadow .25s}
+.portfolio-more summary:hover{transform:translateY(-2px);box-shadow:0 20px 44px #11130f40}
+.portfolio-more summary span{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#c77a60;color:#fff;font-size:30px;transition:transform .25s}
+.portfolio-more[open] summary{min-height:90px}
+@media(max-width:680px){.portfolio-more summary{min-height:110px;padding:22px 20px;font-size:19px;background:linear-gradient(90deg,#1c221c 0,#1c221ce6 50%,#1c221c80),url(assets/portfolio/serkan-044.webp) center/cover no-repeat,#1c221c;height:48px;font-size:24px}}
+.service-grid-all>*{min-width:0}
+.service-grid-all .card-cta{display:block}
+@media(max-width:680px){.service-grid-all .card-cta{grid-column:1/-1;aspect-ratio:auto;min-height:250px}.service-grid-all .card-cta .abstract{font-size:60px}}

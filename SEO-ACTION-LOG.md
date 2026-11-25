@@ -53,3 +53,13 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - B2B bölümündeki Bauhaus/IKEA cümlesi 12 sayfadan kaldırıldı.
 - İletişim formu: telefon zorunlu, e-posta isteğe bağlı (12 sayfa); e-posta boşsa mailto yedeğinde "Belirtilmedi" yazılıyor.
 - GA4 rapor iş akışının pazartesi zamanlaması kapatıldı; workflow_dispatch korunuyor.
+
+## 2026-11-26 — Görsel ve kurumsal görünüm düzeltmeleri (kullanıcı geri bildirimi)
+
+- Logo yazısı: amblem + ince altın ayraç + geniş aralıklı "ÖDER" + tek satır "MİMARLIK VE MOBİLYA TASARIM" (ana sayfa ve 11 dil).
+- Bireysel ev dekorasyonu ve 11 hizmet sayfasında yalnız yazı olan logo yerine aynı amblemli logo.
+- Hizmetler bölümü: 6 kart → 11 hizmetin tamamı + görüşme kartı; her kart kendi hizmet sayfasına gidiyor. Yeni 4:5 kart görselleri (assets/portfolio/cards/), TV ekranlı görsel ve telefon filigranları çıkarıldı.
+- Dil sayfalarında mevcut 6 hizmet kartının görselleri yenilendi (dil sayfalarına ait hizmet sayfası olmadığı için kartlar #iletisim'e gitmeye devam ediyor).
+- Menü: "Mobilya Tasarım" artık Hizmetler ile aynı yere değil, mobilya detayları bölümüne gidiyor.
+- Menüden bölüme geçişte başlığın üstündeki ~108 px boşluk ~40 px'e indirildi.
+- "Tüm saha fotoğraflarını gör" küçük satırdan büyük, görselli, turuncu düğmeli çağrı alanına çevrildi.

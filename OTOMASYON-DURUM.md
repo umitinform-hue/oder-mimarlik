@@ -80,6 +80,7 @@ Tur 5 (19 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İ
 - odermimarlik.com.tr için sunucu tarafı 301 — kullanıcı işi (alan adı sağlayıcısı/Cloudflare).
 
 ## Kullanıcının verdiği bilgiler
+- 26.11.2026: Logo yazısı daha kurumsal olmalı; hizmetlerde tüm hizmetler ve daha çekici görseller (TV ekranlı görsel olmasın); menü tıklamasındaki boşluk giderilmeli; saha fotoğrafları bağlantısı büyük ve dikkat çekici olmalı; bireysel ev sayfasında logo eksik; Mobilya Tasarım ve Hizmetler aynı yere gitmemeli. Hepsi uygulandı (otomasyon/gorsel-duzeltmeler-2026-11-26).
 - 19.11.2026: Müşteri adı yayında kalmayacak (video, hizmet sayfası, VideoObject, video sitemap ve 11 dil çevirisinden kaldırıldı). Bauhaus/IKEA cümlesi 12 sayfadan kaldırıldı. Formlarda telefon zorunlu, e-posta isteğe bağlı.
 - 19.11.2026: Eski GA4 rapor iş akışının haftalık zamanlaması kapatıldı (secret yok, her pazartesi hata veriyordu); elle çalıştırma açık, betik ve belgeler korunuyor. Haftalık SEO raporu Claude zamanlanmış görevinden geliyor.
 
