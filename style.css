@@ -93,3 +93,10 @@ section[id].section-pad,section#hizmetler,section#projeler{scroll-margin-top:-74
 .service-grid-all>*{min-width:0}
 .service-grid-all .card-cta{display:block}
 @media(max-width:680px){.service-grid-all .card-cta{grid-column:1/-1;aspect-ratio:auto;min-height:250px}.service-grid-all .card-cta .abstract{font-size:60px}}
+/* 2026-11-26b mimari logo yazısı — eski .header .brand-copy b kurallarını ezmek için yüksek özgüllük */
+.header .brand .brand-copy,.brand-footer .brand-copy{display:flex;flex-direction:column;justify-content:center;gap:6px;padding-left:16px;border-left:1px solid #b89b59;line-height:1}
+.header .brand .brand-copy b,.brand-footer .brand-copy b{font:600 34px/.9 'Cormorant Garamond',Georgia,'Times New Roman',serif;letter-spacing:.34em;margin-right:-.34em;color:#1d221c;text-transform:uppercase}
+.header .brand .brand-copy small,.brand-footer .brand-copy small{font:600 8.5px/1 'DM Sans',Arial,sans-serif;letter-spacing:.3em;color:#9a8147;padding-top:6px;border-top:1px solid #d9c9a0;white-space:nowrap}
+.header .brand .brand-emblem{width:56px;height:56px}
+@media(max-width:950px){.header .brand .brand-copy b{font-size:28px;letter-spacing:.28em;margin-right:-.28em}.header .brand .brand-copy small{font-size:7.5px;letter-spacing:.22em}.header .brand .brand-emblem{width:48px;height:48px}}
+@media(max-width:680px){.header .brand .brand-copy{padding-left:10px;gap:4px}.header .brand .brand-copy b{font-size:23px;letter-spacing:.22em;margin-right:-.22em}.header .brand .brand-copy small{font-size:6.3px;letter-spacing:.14em;padding-top:4px}.header .brand .brand-emblem{width:40px;height:40px}}
