@@ -1,8 +1,9 @@
 name: Weekly Öder Mimarlık SEO + GA4 report
 
+# 19.11.2026: Haftalık zamanlama kapatıldı. GA4_PROPERTY_ID ve GOOGLE_SERVICE_ACCOUNT_JSON
+# secret'ları tanımlı olmadığı için her pazartesi hata veriyordu. Secret'lar eklenirse
+# Actions sekmesinden elle (workflow_dispatch) çalıştırılabilir; zamanlama geri eklenebilir.
 on:
-  schedule:
-    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:

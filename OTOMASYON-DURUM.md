@@ -61,19 +61,24 @@ Tur 5 (19 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İ
 | — | /bireysel-ev-dekorasyonu/ FAQPage görünür SSS ile uyuşmuyordu; ince içerik; hizmet sayfalarına iç link yok; adres kısaltılmış | 19 Kas tur 5, `otomasyon/seo-aio-cro-2026-11-19` | FAQPage = görünür 2/4 → 5/5; kelime (BS4, main) 373 → 468; hizmet iç linki 0 → 6; fayda satırı 0 → 1; tam adres 0 → 1 |
 | — | BEKLEYEN 5 (hizmet sayfası video etiketleri) | 19 Kas tur 5, kare çıkarımıyla kontrol | 3 videodan 6 kare: ışıklı ahşap raf/niş/gardırop; etiketler videos.js kataloğuyla uyumlu; videonun sayfa konusuyla ilgisi içerik kararı, değişiklik yapılmadı |
 
+## TASARIM KURALI (26.11.2026, kullanıcı kararı)
+
+Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlüğü korunacak:
+- Sayfa adresleri (URL) değişmez; değişmesi zorunluysa 301 yönlendirmesi olmadan yayına alınmaz.
+- Görünür metin, H1/H2 başlıkları, SSS ve hizmet metinleri silinmez (yalnız iyileştirilir).
+- title, meta description, canonical, hreflang, JSON-LD, sitemap, robots.txt, GTM ve Formspree korunur.
+- Yeni tasarım daha yavaş olamaz; mobil uyum ve JavaScript'siz okunabilirlik korunur.
+- Sıra: PR #7 birleşir → kullanıcı canlıda değerlendirir → gerekirse önce ana sayfa taslağı, kullanıcı onayı, sonra yayın. Her adımda test.py + tarayıcı kontrolü.
+
 ## BEKLEYEN (öncelik sırasıyla)
 
 1. **UYARI – Saha fotoğraf galerisi ve konsept panosu (betikle üretilen, tıklayınca görünen)**: script.js'teki ~60 fotoğraf açıklaması ve konsept panosu ara mesajları dil sayfalarında Türkçe. Çözüm hazır altyapıyla: metni `tx()` ile sarmala, `i18n/<dil>.js` dosyalarına ekle. Bekleme: 1 tur.
-2. **UYARI – Ana sayfa formu**: e-posta zorunlu, telefon isteğe bağlı → KULLANICI KARARI.
+2. **ÇÖZÜLDÜ (19.11.2026) – Formlar**: telefon zorunlu, e-posta isteğe bağlı (kullanıcı kararı; ana sayfa + 11 dil).
 3. **UYARI – Büyük kaynak logolar** (assets/logo/*-source.png, 1,7–1,9 MB) hiçbir sayfada kullanılmıyor; silme yasak, dokunulmadı.
 4. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
 5. **BİLGİ – Hizmet sayfası KAPSAM video açıklamaları** (ör. çocuk odası sayfasında "Ahşap sergileme nişleri ve raflar") sayfa konusuyla uyuşmuyor; video dosyası doğrulanmadan değiştirilmedi.
 
 ## KULLANICI KARARI BEKLEYEN
-
-- **Görünür metinde üçüncü taraf marka adları**: ana ve dil sayfalarındaki B2B bölümünde "Bauhaus, IKEA ve benzeri markaların satın alma… ekipleri" cümlesi (12 sayfa). Kural gereği otomasyon silmedi ve çevirmedi; kaldırılması/yeniden yazılması için onay bekleniyor.
-- Ana sayfa formunda e-posta yerine telefonun zorunlu olması (kalite kapısı önerisi) — karar bekleniyor.
-- Video ve hizmet sayfası metinlerindeki müşteri adı "Shade Home Fashion" (mevcut içerik; otomasyon eklemedi, silmedi) — yayında kalması için açık onay bekleniyor.
 
 - Öder Mimarlık'a ait Google İşletme Profili bağlantısı (varsa) — bilgi bekleniyor.
 - Diğer sosyal profiller (Instagram dışında) — bilgi bekleniyor.
@@ -84,6 +89,9 @@ Tur 5 (19 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İ
 - odermimarlik.com.tr için sunucu tarafı 301 — kullanıcı işi (alan adı sağlayıcısı/Cloudflare).
 
 ## Kullanıcının verdiği bilgiler
+- 26.11.2026: Logo yazısı daha kurumsal olmalı; hizmetlerde tüm hizmetler ve daha çekici görseller (TV ekranlı görsel olmasın); menü tıklamasındaki boşluk giderilmeli; saha fotoğrafları bağlantısı büyük ve dikkat çekici olmalı; bireysel ev sayfasında logo eksik; Mobilya Tasarım ve Hizmetler aynı yere gitmemeli. Hepsi uygulandı (otomasyon/gorsel-duzeltmeler-2026-11-26).
+- 19.11.2026: Müşteri adı yayında kalmayacak (video, hizmet sayfası, VideoObject, video sitemap ve 11 dil çevirisinden kaldırıldı). Bauhaus/IKEA cümlesi 12 sayfadan kaldırıldı. Formlarda telefon zorunlu, e-posta isteğe bağlı.
+- 19.11.2026: Eski GA4 rapor iş akışının haftalık zamanlaması kapatıldı (secret yok, her pazartesi hata veriyordu); elle çalıştırma açık, betik ve belgeler korunuyor. Haftalık SEO raporu Claude zamanlanmış görevinden geliyor.
 
 - 16 Kas 2026: Instagram kullanıcı adı `odermimarlik` → https://www.instagram.com/odermimarlik/ (profil içeriği otomasyon tarafından DOĞRULANAMADI: instagram.com robots kuralı okumayı engelliyor).
 
