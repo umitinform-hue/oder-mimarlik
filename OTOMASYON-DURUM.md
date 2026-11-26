@@ -95,6 +95,7 @@ Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlü�
 - odermimarlik.com.tr için sunucu tarafı 301 — kullanıcı işi (alan adı sağlayıcısı/Cloudflare).
 
 ## Kullanıcının verdiği bilgiler
+- 26.11.2026 (2): Logo, ÖDER GROUP kurumsal logo kılavuzundaki (Temmuz 2026) "ÖDER GROUP · İNŞAAT & MİMARLIK" alt marka logosu olacak; sitede yatay dizilim (amblem + yazı). B2B bölümünde yazılar büyük ve net, 4 tıklanabilir fotoğraf, "ÖDER MOBİLYA" damgası yerine "Kurumsal teklif" rozeti; "Ürün teşhir rafları ve mağaza mobilyası · saha arşivinden örnek" yazısı kalır. Google için rehber ve blog sayfaları (başlangıç: 3 rehber + 3 blog). Bing'de yer alma. Mobil açılış 2,5 sn'den kısa.
 - 26.11.2026: Logo yazısı daha kurumsal olmalı; hizmetlerde tüm hizmetler ve daha çekici görseller (TV ekranlı görsel olmasın); menü tıklamasındaki boşluk giderilmeli; saha fotoğrafları bağlantısı büyük ve dikkat çekici olmalı; bireysel ev sayfasında logo eksik; Mobilya Tasarım ve Hizmetler aynı yere gitmemeli. Hepsi uygulandı (otomasyon/gorsel-duzeltmeler-2026-11-26).
 - 19.11.2026: Müşteri adı yayında kalmayacak (video, hizmet sayfası, VideoObject, video sitemap ve 11 dil çevirisinden kaldırıldı). Bauhaus/IKEA cümlesi 12 sayfadan kaldırıldı. Formlarda telefon zorunlu, e-posta isteğe bağlı.
 - 19.11.2026: Eski GA4 rapor iş akışının haftalık zamanlaması kapatıldı (secret yok, her pazartesi hata veriyordu); elle çalıştırma açık, betik ve belgeler korunuyor. Haftalık SEO raporu Claude zamanlanmış görevinden geliyor.
@@ -145,6 +146,8 @@ Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlü�
 - 26 Kas (tur 6): Tur 5'teki FAQ görünürlük sayımı BeautifulSoup `get_text` ile script içeriğini de sayıyordu → kural: görünür metni ölçmeden önce script/style/noscript etiketlerini çıkar.
 
 ## Sonraki turun önceliği
+
+0. Rehber/blog: her tur en fazla 1 yeni yazı önerisi (yalnız genel bilgi; rakam/iddia yok). Bing Webmaster Tools doğrulaması kullanıcı işi; IndexNow anahtar dosyası kökte.
 
 1. PR #8 durumu: birleştiyse canlıda galeri çevirisi, tek FAQPage ve /bs/-/me/ açıklamalarını say; birleşmediyse dalı main ile güncelle.
 2. Dil sayfalarında VideoObject açıklamalarının çevirisi (BEKLEYEN 6).
