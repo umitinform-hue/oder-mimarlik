@@ -102,9 +102,9 @@ section[id].section-pad,section#hizmetler,section#projeler{scroll-margin-top:-74
 @media(max-width:680px){.header .brand .brand-copy{padding-left:10px;gap:4px}.header .brand .brand-copy b{font-size:23px;letter-spacing:.22em;margin-right:-.22em}.header .brand .brand-copy small{font-size:6.3px;letter-spacing:.14em;padding-top:4px}.header .brand .brand-emblem{width:40px;height:40px}}
 
 /* 2026-11-26c Öder Group İnşaat & Mimarlık logosu (kurumsal kılavuz s.7, yatay kilitleme) */
-a .brand-logo{display:block;height:58px;width:auto;max-width:none;flex:none}
+a .brand-logo{display:block;height:60px;width:auto;max-width:none;flex:none}
 .brand-footer .brand-logo{height:56px}
-@media(max-width:680px){a .brand-logo{height:44px}.brand-footer .brand-logo{height:46px}}
+@media(max-width:680px){a .brand-logo{height:36px}.brand-footer .brand-logo{height:40px}}
 /* 2026-11-26c Kurumsal (B2B) bölümü: büyük metin, 4 tıklanabilir görsel, kurumsal teklif rozeti */
 .retail-v2{align-items:start;gap:6%}
 .retail-v2 .eyebrow{font-size:12px;letter-spacing:.16em;color:#ecebe3}
