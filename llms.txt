@@ -30,6 +30,17 @@ Slogan: "Mobilya iyi, mekân bambaşka."
 - [Ekstrem ve özel projeler](https://odermimarlik.com/hizmetler/ekstrem-ozel-projeler/)
 - [Bireysel ev dekorasyonu (İstanbul)](https://odermimarlik.com/bireysel-ev-dekorasyonu/)
 
+## Rehberler ve blog
+
+- [Rehberler](https://odermimarlik.com/rehber/)
+- [Mutfak Dolabı Seçerken Nelere Dikkat Edilmeli?](https://odermimarlik.com/rehber/mutfak-dolabi-secimi/): Mutfak dolabı seçerken yerleşim, gövde ve kapak malzemesi, tezgâh, dolap içi düzen ve ankastre cihaz planlamasında dikkat edilecek noktalar.
+- [Mağaza ve Showroom Teşhir Planlama Rehberi](https://odermimarlik.com/rehber/magaza-showroom-teshir-planlama/): Mağaza ve showroom teşhir alanı planlarken müşteri akışı, raf sistemi, aydınlatma, marka görünürlüğü ve tekrarlanabilir mobilya için rehber.
+- [Fuar Standı Hazırlık Rehberi: Tasarımdan Kuruluma](https://odermimarlik.com/rehber/fuar-standi-hazirlik/): Fuar standı hazırlığında hedef belirleme, stand tipi, ürün teşhiri, ziyaretçi akışı, fuar kuralları ve kurulum planlaması için adım adım rehber.
+- [Blog](https://odermimarlik.com/blog/)
+- [Ölçüye Özel Mobilya mı, Hazır Mobilya mı?](https://odermimarlik.com/blog/olcuye-ozel-mobilya-mi-hazir-mobilya-mi/): Ölçüye özel mobilya ile hazır mobilya arasında seçim yaparken mekân, kullanım, malzeme, uyum ve uzun vadeli kullanım açısından karşılaştırma.
+- [Zemin Kaplaması Seçimi: Parke, Laminat, Seramik ve Vinil](https://odermimarlik.com/blog/zemin-kaplamasi-secimi/): Parke, laminat, seramik ve vinil zemin kaplamalarını kullanım alanı, nem, bakım, ses ve görünüm açısından karşılaştıran rehber yazı.
+- [Küçük Ev Dekorasyonu: Alanı Ferah Gösteren Fikirler](https://odermimarlik.com/blog/kucuk-ev-dekorasyonu/): Küçük evlerde alanı ferah gösteren renk, ışık, çok amaçlı ve ölçüye özel mobilya, depolama ve yerleşim fikirleri.
+
 ## Nasıl çalışır
 
 1. Keşif ve brief: alan, hedef, kullanıcı ve teslimat bölgesi netleştirilir.
