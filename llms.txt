@@ -56,4 +56,4 @@ Tasarım, özel üretim ve uygulama birlikte ya da ayrı ayrı görüşülebilir
 ## Notlar
 
 - Sitedeki saha fotoğrafları uygulama arşivinden seçilmiştir; görsel başlıkları alanı tarif eder, proje veya müşteri bilgisi içermez.
-- Sitedeki fiyat hesaplayıcı yaklaşık bir aralık verir; kesin teklif keşif ve kapsam doğrulamasından sonra belirlenir.
+- Fiyat, keşif ve kapsam doğrulamasından sonra hazırlanan teklifle belirlenir; sitede otomatik fiyat hesaplayıcı yoktur.

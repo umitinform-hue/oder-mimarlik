@@ -1,6 +1,6 @@
 # Öder Mimarlık — Otomasyon Durumu (SEO / AIO / CRO)
 
-Son doğrulama tarihi: 19 Kasım 2026 (tur 5, zamanlanmış görev)
+Son doğrulama tarihi: 26 Kasım 2026 (tur 6, zamanlanmış görev)
 Kaynak depo: umitinform-hue/oder-mimarlik (yayın: GitHub Pages, `main`)
 
 ## Durum
@@ -17,6 +17,8 @@ Tur 3 (18 Kas 19:22): SEO teknik İyi; içerik Orta−; AIO Orta+; CRO İyi− (
 Tur 4 (18 Kas 23:30): SEO teknik İyi; içerik Orta (hizmet sayfaları ayrıştı, 11 dil sayfası çevrildi); AIO İyi− (tüm FAQPage = görünür SSS); CRO İyi−. Açık KRİTİK: 0.
 
 Tur 5 (19 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İyi− (bireysel ev sayfası FAQPage eşlendi); CRO İyi−. Açık KRİTİK: 0. Regresyon: 0. PR #5 (kullanıcı kararları; script.js, i18n, 12 ana/dil sayfası, iş akışı) açık; bu tur o dosyalara dokunmadı.
+
+Tur 6 (26 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İyi (dil sayfalarında tek FAQPage); CRO İyi−. Açık KRİTİK: 0. Regresyon: 0 (24 URL, canonical/sitemap/H1/JSON-LD/NAP/FAQ eşleşmesi). Açık otomasyon/ PR'ı #8 (sadeleştirme, kullanıcı tasarım kararı) olduğu için yeni PR açılmadı; düzeltmeler #8 dalına eklendi. #8 başka oturumun commit'lerini içerdiği ve TASARIM KURALI kullanıcı değerlendirmesi istediği için otomasyon birleştirmedi.
 
 ## TAMAMLANDI
 
@@ -59,6 +61,9 @@ Tur 5 (19 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İ
 | — | **Türkçe ana sayfa Türkçe olmayan tarayıcıda (Googlebot dahil) İngilizceye dönüyordu** | aynı | en-US/de-DE'de lang=en → lang=tr (Playwright); menüden seçim çalışıyor |
 | — | Video `uploadDate` saat dilimi (Search Console 26 Eki uyarısı) | doğrulandı, değişiklik gerekmedi | 18 blok `+03:00` ile |
 | — | /bireysel-ev-dekorasyonu/ FAQPage görünür SSS ile uyuşmuyordu; ince içerik; hizmet sayfalarına iç link yok; adres kısaltılmış | 19 Kas tur 5, `otomasyon/seo-aio-cro-2026-11-19` | FAQPage = görünür 2/4 → 5/5; kelime (BS4, main) 373 → 468; hizmet iç linki 0 → 6; fayda satırı 0 → 1; tam adres 0 → 1 |
+| — | BEKLEYEN 1: saha fotoğraf galerisi altyazı/alt/aria metinleri dil sayfalarında Türkçe | 26 Kas tur 6, PR #8 dalı (`otomasyon/sade-ana-sayfa-2026-11-26`) | Playwright (en-US): Türkçe altyazı 65 → 0, alt 65 → 0, aria 65 → 0 (11 dil); 101 anahtar × 11 `i18n/<dil>.js`; Türkçe sayfa değişmedi |
+| — | 11 dil sayfasında iki FAQPage bloğu (`data-source="localized-faq"`) | aynı | blok 22 → 11; sorular görünür SSS'de 7–8/7–8 |
+| — | /bs/ ve /me/ aynı meta description | aynı | aynı açıklama 2 → 0 |
 | — | BEKLEYEN 5 (hizmet sayfası video etiketleri) | 19 Kas tur 5, kare çıkarımıyla kontrol | 3 videodan 6 kare: ışıklı ahşap raf/niş/gardırop; etiketler videos.js kataloğuyla uyumlu; videonun sayfa konusuyla ilgisi içerik kararı, değişiklik yapılmadı |
 
 ## TASARIM KURALI (26.11.2026, kullanıcı kararı)
@@ -72,7 +77,8 @@ Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlü�
 
 ## BEKLEYEN (öncelik sırasıyla)
 
-1. **UYARI – Saha fotoğraf galerisi ve konsept panosu (betikle üretilen, tıklayınca görünen)**: script.js'teki ~60 fotoğraf açıklaması ve konsept panosu ara mesajları dil sayfalarında Türkçe. Çözüm hazır altyapıyla: metni `tx()` ile sarmala, `i18n/<dil>.js` dosyalarına ekle. Bekleme: 1 tur.
+1. **ÇÖZÜLDÜ (26.11.2026, PR #8 dalında; birleşme bekliyor) – Saha fotoğraf galerisi çevirisi.** Konsept panosu (fotoğraf laboratuvarı) PR #8 ile kaldırılıyor; birleşmezse panonun ara mesajları yeniden BEKLEYEN olur.
+6. **UYARI – Dil sayfalarında VideoObject `description` Türkçe** (ör. /ro/ "Ölçüye özel mutfak, mobilya…"). Bekleme: 1 tur.
 2. **ÇÖZÜLDÜ (19.11.2026) – Formlar**: telefon zorunlu, e-posta isteğe bağlı (kullanıcı kararı; ana sayfa + 11 dil).
 3. **UYARI – Büyük kaynak logolar** (assets/logo/*-source.png, 1,7–1,9 MB) hiçbir sayfada kullanılmıyor; silme yasak, dokunulmadı.
 4. **BİLGİ – `locale-content.js` hiçbir sayfada yüklenmiyor** (ölü dosya). Silme yasak olduğundan dokunulmadı.
@@ -107,15 +113,15 @@ Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlü�
 
 ## Görünürlük gözlemi (ABD tabanlı arama aracı; sıralama değil)
 
-| Sorgu | 16 Kas | 18 Kas | 18 Kas (tur 2) | 19 Kas |
-|---|---|---|---|---|
-| Öder Mimarlık | çıkmadı | DOĞRULANAMADI | çıkmadı | çıkmadı |
-| Oder Mimarlık Ataşehir | — | — | çıkmadı | çıkmadı |
-| odermimarlik.com | çıkmadı | DOĞRULANAMADI | — | — |
-| ölçüye özel mobilya Ataşehir | çıkmadı | DOĞRULANAMADI | çıkmadı (armut.com ağırlıklı) | çıkmadı (armut.com) |
-| mutfak dolabı tasarımı İstanbul | — | — | çıkmadı (pazar yerleri, armut.com) | çıkmadı (pazar yerleri, armut.com) |
-| fuar standı tasarımı İstanbul | — | — | çıkmadı (expoassist.net, stand firmaları) | çıkmadı (expoassist.net) |
-| iç mimarlık firması Ataşehir | — | — | çıkmadı (armut.com ağırlıklı) | çıkmadı (armut.com) |
+| Sorgu | 16 Kas | 18 Kas | 18 Kas (tur 2) | 19 Kas | 26 Kas |
+|---|---|---|---|---|---|
+| Öder Mimarlık | çıkmadı | DOĞRULANAMADI | çıkmadı | çıkmadı | çıkmadı (yabancı mimarlık dizinleri) |
+| Oder Mimarlık Ataşehir | — | — | çıkmadı | çıkmadı | çıkmadı (armut.com) |
+| odermimarlik.com | çıkmadı | DOĞRULANAMADI | — | — | — |
+| ölçüye özel mobilya Ataşehir | çıkmadı | DOĞRULANAMADI | çıkmadı (armut.com ağırlıklı) | çıkmadı (armut.com) | çıkmadı (armut.com) |
+| mutfak dolabı tasarımı İstanbul | — | — | çıkmadı (pazar yerleri, armut.com) | çıkmadı (pazar yerleri, armut.com) | çıkmadı (pazar yerleri, armut.com) |
+| fuar standı tasarımı İstanbul | — | — | çıkmadı (expoassist.net, stand firmaları) | çıkmadı (expoassist.net) | çıkmadı (expoassist.net, firmasec.com) |
+| iç mimarlık firması Ataşehir | — | — | çıkmadı (armut.com ağırlıklı) | çıkmadı (armut.com) | çıkmadı (armut.com) |
 
 ## Alınan dersler
 
@@ -135,9 +141,11 @@ Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlü�
 - 19 Kas (tur 5): FAQPage eşleşmesi yalnız hizmet/ana/dil sayfalarında yapılmıştı; /bireysel-ev-dekorasyonu/ kaçmıştı → kural: şema-görünür eşleşmesini sitemap'teki her URL için say.
 - 19 Kas (tur 5): Açık PR #5 script.js, i18n ve 12 ana/dil sayfasını değiştiriyordu; aynı dosyalara dokunmak çakışma yaratacaktı → kural: açık PR'ın dosyalarını tur başında çıkar, durum dosyasında o PR'ın satırlarına bitişik satır değiştirme.
 
+- 26 Kas (tur 6): WebFetch ilk okumada /en/ için 18 Kas'ta kaldırılmış "e-posta taslağı" notunu gösterdi; sorgu parametresiyle yeniden okununca güncel sürüm geldi → kural: canlıda regresyon görünürse kaynakla karşılaştır ve önbelleği aşan parametreyle yeniden oku; tek okumaya göre KRİTİK yazma.
+- 26 Kas (tur 6): Tur 5'teki FAQ görünürlük sayımı BeautifulSoup `get_text` ile script içeriğini de sayıyordu → kural: görünür metni ölçmeden önce script/style/noscript etiketlerini çıkar.
+
 ## Sonraki turun önceliği
 
-1. PR #5 birleştiyse: saha fotoğraf galerisi ve konsept panosu metinlerinin çevirisi (BEKLEYEN 1; 2 tur ertelendi — engel: PR #5 aynı script.js ve i18n dosyalarını değiştiriyor). 3. turda ERTELEME YASAĞI gereği PR'a girecek.
-2. Ana ve dil sayfalarında ikinci FAQPage bloğu (`data-source="localized-faq"`, görünür 3 soru) — sayfa başına tek FAQPage'de birleştirme (UYARI; PR #5 dosyaları).
-3. /bs/ ve /me/ aynı meta description (UYARI; PR #5 dosyaları).
-4. Regresyon sayımı ve görünürlük gözlemi.
+1. PR #8 durumu: birleştiyse canlıda galeri çevirisi, tek FAQPage ve /bs/-/me/ açıklamalarını say; birleşmediyse dalı main ile güncelle.
+2. Dil sayfalarında VideoObject açıklamalarının çevirisi (BEKLEYEN 6).
+3. Regresyon sayımı ve görünürlük gözlemi.

@@ -63,3 +63,18 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - Menü: "Mobilya Tasarım" artık Hizmetler ile aynı yere değil, mobilya detayları bölümüne gidiyor.
 - Menüden bölüme geçişte başlığın üstündeki ~108 px boşluk ~40 px'e indirildi.
 - "Tüm saha fotoğraflarını gör" küçük satırdan büyük, görselli, turuncu düğmeli çağrı alanına çevrildi.
+
+## 2026-11-26 (2) — Sadeleştirme ve logo
+
+- "Anında fiyat tahmini" (#maliyet) ve "Fotoğrafınızı yükleyin" (#foto-tasarim) bölümleri ana sayfa ve 11 dil sayfasından kaldırıldı (kullanıcı kararı). Laboratuvar çalışıyordu ama yalnız yüklenen fotoğrafı hazır bir metin ve 3 renkle gösteriyordu; gerçek tasarım üretmediği için kaldırıldı.
+- İlgili SSS sorusu görünür SSS'den ve FAQPage şemasından birlikte çıkarıldı (5 soru, eşleşme korunuyor). llms.txt güncellendi.
+- Menüde "Tasarım laboratuvarı" yerine "İletişim" (11 dilde çevrili).
+- Logo yazısı: önceki stil daha baskın eski bir kurala takıldığı için canlıda değişmemişti; Cormorant Garamond serif, geniş harf aralığı, altın çizgili alt yazı ile yeniden yapıldı.
+- script.js: fiyat hesaplayıcı kodu eleman yoksa çalışmayacak şekilde korumaya alındı.
+
+## 2026-11-26 (3) — Haftalık otomasyon turu 6 (PR #8 dalına eklendi)
+
+- Saha fotoğraf galerisi altyazı, alt ve aria metinleri 11 dilde çevrildi (`tx()` + `i18n/<dil>.js`, 101 anahtar); dil sayfalarında Türkçe altyazı 65 → 0.
+- 11 dil sayfasında iki FAQPage bloğu tek blokta birleştirildi (22 → 11).
+- /bs/ ve /me/ meta description ayrıştırıldı.
+- script.js ve i18n sürüm parametreleri yenilendi (önbellek).
