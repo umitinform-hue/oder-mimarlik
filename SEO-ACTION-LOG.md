@@ -71,3 +71,10 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - Menüde "Tasarım laboratuvarı" yerine "İletişim" (11 dilde çevrili).
 - Logo yazısı: önceki stil daha baskın eski bir kurala takıldığı için canlıda değişmemişti; Cormorant Garamond serif, geniş harf aralığı, altın çizgili alt yazı ile yeniden yapıldı.
 - script.js: fiyat hesaplayıcı kodu eleman yoksa çalışmayacak şekilde korumaya alındı.
+
+## 2026-11-26 (3) — Haftalık otomasyon turu 6 (PR #8 dalına eklendi)
+
+- Saha fotoğraf galerisi altyazı, alt ve aria metinleri 11 dilde çevrildi (`tx()` + `i18n/<dil>.js`, 101 anahtar); dil sayfalarında Türkçe altyazı 65 → 0.
+- 11 dil sayfasında iki FAQPage bloğu tek blokta birleştirildi (22 → 11).
+- /bs/ ve /me/ meta description ayrıştırıldı.
+- script.js ve i18n sürüm parametreleri yenilendi (önbellek).
