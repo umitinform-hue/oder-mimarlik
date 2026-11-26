@@ -78,3 +78,11 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - 11 dil sayfasında iki FAQPage bloğu tek blokta birleştirildi (22 → 11).
 - /bs/ ve /me/ meta description ayrıştırıldı.
 - script.js ve i18n sürüm parametreleri yenilendi (önbellek).
+
+## 2026-11-26 (4) — Kurumsal logo, B2B bölümü, rehber/blog, hız (kullanıcı talebi)
+
+- Logo: ÖDER GROUP kılavuzundaki İnşaat & Mimarlık alt marka logosu, yatay WebP (18 KB); 24 sayfada 36 yer. Şemaya `logo` eklendi (24 blok).
+- B2B (#kurumsal, 12 sayfa): metin 12 → 18 px, maddeler görselden metne taşındı, 4 tıklanabilir görsel (b2b/kurumsal-1..4.webp, 39–54 KB), dönen "Kurumsal teklif" rozeti (forma gider, `data-b2b-cta`).
+- /rehber/ (3) ve /blog/ (3) + iki ana sayfa: Article/BlogPosting, FAQPage, BreadcrumbList, "Kısa cevap" kutusu, içindekiler; sitemap 24 → 32; llms.txt; 11 hizmet sayfasından ve ana sayfa menüsünden iç link.
+- Hız: Google Fonts CSS'i render'ı bloklamıyor (13 sayfa), hizmet sayfalarında kullanılmayan font kaldırıldı (11), kullanılmayan video preload kaldırıldı (12), Manrope ailesi kaldırıldı.
+- Bing: IndexNow anahtar dosyası köke eklendi.

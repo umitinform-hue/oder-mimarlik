@@ -45,3 +45,4 @@ a .brand-logo{display:block;height:58px;width:auto;max-width:none;flex:none}
 .hub-more{font-size:16px}
 @media(max-width:900px){.hub-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.service-nav .nav-links{gap:12px}.service-nav .nav-links>a:not(.back-link){font-size:14px}.service-nav .back-link{display:none}.hub-grid,.article-links{grid-template-columns:1fr}.article-body p,.article-body li,.article-answer p{font-size:17px}}
+.hub-more a,.crumbs a{color:#8a6239}
