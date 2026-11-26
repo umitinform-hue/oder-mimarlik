@@ -68,3 +68,17 @@ Tasarım, özel üretim ve uygulama birlikte ya da ayrı ayrı görüşülebilir
 
 - Sitedeki saha fotoğrafları uygulama arşivinden seçilmiştir; görsel başlıkları alanı tarif eder, proje veya müşteri bilgisi içermez.
 - Fiyat, keşif ve kapsam doğrulamasından sonra hazırlanan teklifle belirlenir; sitede otomatik fiyat hesaplayıcı yoktur.
+
+## Ülke / dil hizmet sayfaları (Balkanlar)
+
+- [Interior design and custom furniture for projects in the Balkans](https://odermimarlik.com/en/interior-design-furniture/) — en
+- [Интериорен дизайн и мебели по поръчка за проекти в България](https://odermimarlik.com/bg/interioren-dizain-mebeli/) — bg-BG
+- [Design interior și mobilier la comandă pentru proiecte în România](https://odermimarlik.com/ro/design-interior-mobilier/) — ro-RO
+- [Dizajn enterijera i nameštaj po meri za projekte u Srbiji](https://odermimarlik.com/sr/enterijer-namestaj/) — sr-RS
+- [Dizajn interieri dhe mobilje me porosi për projekte në Shqipëri dhe Kosovë](https://odermimarlik.com/sq/dizajn-interieri-mobilje/) — sq-AL
+- [Εσωτερική αρχιτεκτονική και έπιπλα κατά παραγγελία για έργα στην Ελλάδα και την Κύπρο](https://odermimarlik.com/el/esoteriki-diakosmisi-epipla/) — el-GR
+- [Dizajn enterijera i namještaj po mjeri za projekte u Bosni i Hercegovini](https://odermimarlik.com/bs/enterijer-namjestaj/) — bs-BA
+- [Dizajn interijera i namještaj po mjeri za projekte u Hrvatskoj](https://odermimarlik.com/hr/dizajn-interijera-namjestaj/) — hr-HR
+- [Дизајн на ентериер и мебел по нарачка за проекти во Северна Македонија](https://odermimarlik.com/mk/enterier-mebel/) — mk-MK
+- [Notranje oblikovanje in pohištvo po meri za projekte v Sloveniji](https://odermimarlik.com/sl/notranje-oblikovanje-pohistvo/) — sl-SI
+- [Dizajn enterijera i namještaj po mjeri za projekte u Crnoj Gori](https://odermimarlik.com/me/enterijer-namjestaj/) — sr-ME

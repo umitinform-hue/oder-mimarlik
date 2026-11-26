@@ -86,3 +86,11 @@ Bu maddeler, hesap girişi, doğrulama veya işletme adına veri işleme onayı 
 - /rehber/ (3) ve /blog/ (3) + iki ana sayfa: Article/BlogPosting, FAQPage, BreadcrumbList, "Kısa cevap" kutusu, içindekiler; sitemap 24 → 32; llms.txt; 11 hizmet sayfasından ve ana sayfa menüsünden iç link.
 - Hız: Google Fonts CSS'i render'ı bloklamıyor (13 sayfa), hizmet sayfalarında kullanılmayan font kaldırıldı (11), kullanılmayan video preload kaldırıldı (12), Manrope ailesi kaldırıldı.
 - Bing: IndexNow anahtar dosyası köke eklendi.
+
+## 2026-11-27 — Balkan görünürlük altyapısı
+
+- 11 ülke/dil hizmet sayfası (yerel H1/title/description, Service+FAQPage+BreadcrumbList, karşılıklı hreflang + x-default).
+- 11 dil ana sayfası: title/description anahtar kelime + ülke; ülke sayfasına bağlantı.
+- areaServed: 12 sayfada Country nesneleri (14 ülke).
+- sitemap.xml: 32 → 43 URL; 288 hreflang alternatifi; llms.txt ülke sayfaları.
+- Haftalık Balkan modülü OTOMASYON-DURUM.md'ye eklendi.

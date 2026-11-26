@@ -66,6 +66,24 @@ Tur 6 (26 Kas, zamanlanmış): SEO teknik İyi; içerik Orta; AIO İyi− → İ
 | — | /bs/ ve /me/ aynı meta description | aynı | aynı açıklama 2 → 0 |
 | — | BEKLEYEN 5 (hizmet sayfası video etiketleri) | 19 Kas tur 5, kare çıkarımıyla kontrol | 3 videodan 6 kare: ışıklı ahşap raf/niş/gardırop; etiketler videos.js kataloğuyla uyumlu; videonun sayfa konusuyla ilgisi içerik kararı, değişiklik yapılmadı |
 
+## BALKAN GÖRÜNÜRLÜK PLANI (27.11.2026, Ümit'in talebi: "sitenin ilgili dilleri olan Balkan ülkelerinde görünmesini sağlayacak sistem")
+
+Kurulan altyapı (otomasyon/balkan-gorunurluk-2026-11-27):
+- 11 ülke/dil hizmet sayfası: /en/interior-design-furniture/, /bg/interioren-dizain-mebeli/, /ro/design-interior-mobilier/, /sr/enterijer-namestaj/, /sq/dizajn-interieri-mobilje/, /el/esoteriki-diakosmisi-epipla/, /bs/enterijer-namjestaj/, /hr/dizajn-interijera-namjestaj/, /mk/enterier-mebel/, /sl/notranje-oblikovanje-pohistvo/, /me/enterijer-namjestaj/ — yerel dilde H1/title/description ülke adıyla; Service (areaServed ülke) + FAQPage + BreadcrumbList; aralarında karşılıklı hreflang + x-default (en).
+- 11 dil ana sayfasında title/description anahtar kelime + ülke; hizmetler bölümünden ülke sayfasına bağlantı.
+- Şemada areaServed: Türkçe düz metin → İngilizce Country nesneleri (14 ülke).
+- sitemap.xml: dil ana sayfaları ve ülke sayfaları için xhtml:link hreflang alternatifleri.
+- llms.txt: ülke sayfaları listesi.
+- İçerik kaynakları: yalnız sitede zaten olan iddialar (Türkiye ve Avrupa talepleri değerlendirilir; çalışma biçimi ilk görüşmede netleşir). Ülkede ofis, ekip, montaj garantisi, süre, fiyat YAZILMAZ.
+
+Haftalık Balkan modülü (zamanlanmış görev her turda uygular):
+1. Regresyon: 11 ülke sayfası + 11 dil ana sayfası — hreflang karşılıklılığı, canonical, title/description dilinde ve ülke adı içeriyor, sitemap alternatifleri, ülke sayfası bağlantısı ana sayfada.
+2. Haftanın dili (sıra: bg → el → ro → sr → hr → sl → sq → mk → bs → me → en, sonra başa dön): o dile bir rehber/blog yazısının çevirisini ekle (/<dil>/<yerel-slug>/; Türkçe asıl yazıyla karşılıklı hreflang; Article + FAQPage; ülke sayfasından ve dil ana sayfasından iç link; sitemap + llms.txt). Çeviri asıl metne sadık; yeni iddia yok.
+3. Görünürlük gözlemi: WebSearch ile haftanın dilinde 2 sorgu (ör. "интериорен дизайн мебели по поръчка", "εσωτερική αρχιτεκτονική έπιπλα κατά παραγγελία"); odermimarlik.com çıktı mı not et (arama aracının ABD tabanlı olduğunu belirt).
+4. Kullanıcıdan gereken (raporda): Search Console'da odermimarlik.com mülkü + sitemap gönderimi; Bing Webmaster Tools (IndexNow anahtarı mevcut); ülkelerde gerçek iş ortağı/proje/yorum varsa bilgi.
+
+Sıradaki yayın: 1. hafta bg.
+
 ## TASARIM KURALI (26.11.2026, kullanıcı kararı)
 
 Gerekirse site tasarımı komple değiştirilebilir; ancak Google görünürlüğü korunacak:

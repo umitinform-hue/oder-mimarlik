@@ -133,3 +133,5 @@ a .brand-logo{display:block;height:58px;width:auto;max-width:none;flex:none}
 @media(prefers-reduced-motion:reduce){.retail-badge svg{animation:none}.retail-shot img{transition:none}}
 @media(max-width:950px){.retail-v2{grid-template-columns:1fr;gap:40px}.retail-badge{right:8px;top:-30px}}
 @media(max-width:680px){.retail-v2 .retail-copy p{font-size:16px}.retail-list li{font-size:15.5px}.retail-shot span{font-size:12.5px;padding:22px 9px 8px}.retail-grid{gap:5px;padding:5px}.retail-badge{width:92px;height:92px;top:-36px;right:6px}.retail-badge>span{font-size:22px}.retail-gallery .retail-caption{font-size:13px}}
+
+.country-page-link{margin:26px 0 0;text-align:center}.country-page-link a{display:inline-block;padding:16px 26px;border:1px solid #b89b59;background:#fbf8f1;color:#1d221c;font-weight:700;font-size:15px;letter-spacing:.01em;text-decoration:none;transition:background .2s,color .2s}.country-page-link a:hover{background:#1d221c;color:#f8f5eb}
